@@ -1,8 +1,16 @@
+import { HashRouter, Switch } from "react-router-dom";
+import { Home } from "../common/Home/home";
+import { Navbar } from "../common/Navbar/navbar";
+
 function App() {
   return (
-    <div className="App">
+    <HashRouter>
+      <Navbar />
+      <Switch>
+        <Home />
+      </Switch>
+    </HashRouter>
 
-    </div>
   );
 }
 

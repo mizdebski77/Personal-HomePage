@@ -1,10 +1,11 @@
 import React from 'react';
+import { Wrapper } from './styledHome';
 
 export const Home = () => {
     return (
-        <div>
+        <Wrapper>
             
-        </div>
+        </Wrapper>
     );
 };
 

@@ -44,6 +44,7 @@ export const Span = styled.span`
 export const SocialsContainer = styled.div`
     display: flex;
     justify-content: space-around;
+    align-items: center;
 `;
 
 export const DownloadButton = styled.button`
@@ -56,8 +57,12 @@ export const DownloadButton = styled.button`
     font-size: 16px;
 `;
 
-export const Socials = styled.img`
-    height: 50px;
+export const SocialImage = styled.img`
+    height: 40px;
+`;
+
+export const SocialLink = styled.a`
+
 `;
 
 

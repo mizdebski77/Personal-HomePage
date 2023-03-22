@@ -1,10 +1,20 @@
 import React from 'react';
-import { Logo, Wrapper } from './styledNavbar';
+import { Links, LinksContainer, Logo, NavbarContent, Wrapper } from './styledNavbar';
 
 export const Navbar = () => {
     return (
         <Wrapper>
-            <Logo>Logo</Logo>
+            <NavbarContent>
+                <Logo>Logo</Logo>
+                <LinksContainer>
+                    <Links>About</Links>
+                    <Links>Education</Links>
+                    <Links>Skills</Links>
+                    <Links>Portfolio</Links>
+                    <Links>Contact</Links>
+                </LinksContainer>
+            </NavbarContent>
+
         </Wrapper>
     );
 };

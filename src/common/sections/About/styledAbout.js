@@ -55,7 +55,7 @@ export const Title = styled.h1`
   ${({ scrolled }) => scrolled && css`
   display: inline-block;
   animation: ${titleInAnimation} 1s;
-
+  
     `} 
   
 `;

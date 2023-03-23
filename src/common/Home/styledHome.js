@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import SVG from "react-inlinesvg";
+
 
 export const Wrapper = styled.main`
     display: flex;
@@ -7,16 +9,17 @@ export const Wrapper = styled.main`
     min-height: 91vh;
     background: linear-gradient(
     to right,
-    ${({theme}) => theme.color.mainColor} 0%,
-    ${({theme}) => theme.color.mainColor} 55%,
-    ${({theme}) => theme.color.secondColor} 50%,
-    ${({theme}) => theme.color.secondColor} 100%
+    ${({ theme }) => theme.color.mainColor} 0%,
+    ${({ theme }) => theme.color.mainColor} 55%,
+    ${({ theme }) => theme.color.secondColor} 50%,
+    ${({ theme }) => theme.color.secondColor} 100%
   );
 `;
 
 export const TextBox = styled.div`
     width: 800px;
-    background: ${({theme}) => theme.color.boxColor};
+    backdrop-filter: blur(3px);
+    background: ${({ theme }) => theme.color.boxColor};
     display: grid;
     justify-content: center;
     align-items: center;
@@ -25,20 +28,20 @@ export const TextBox = styled.div`
 `;
 
 export const BigText = styled.h1`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     font-size: 60px;
     font-weight: bold;
     margin: 0;
 `;
 
 export const Text = styled.h1`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     font-weight: normal;
     margin: 0;
 `;
 
 export const Span = styled.span`
-    color: ${({theme}) => theme.color.fontSecond};
+    color: ${({ theme }) => theme.color.fontSecond};
 `;
 
 export const SocialsContainer = styled.div`
@@ -47,23 +50,21 @@ export const SocialsContainer = styled.div`
     align-items: center;
 `;
 
-export const DownloadButton = styled.button`
-    color: ${({theme}) => theme.color.white};
-    background: ${({theme}) => theme.color.secondColor} ;
-    padding: 16px;
-    border: none;
-    width: 200px;
-    border-radius: 30px;
-    font-size: 16px;
-`;
-
-export const SocialImage = styled.img`
+export const SocialImage = styled(SVG)`
     height: 40px;
+    width: 40px;
+    fill: ${({ theme }) => theme.color.white};
+    transition: 0.7s;
+
+    &:hover {
+        fill: ${({ theme }) => theme.color.secondColor};
+    }
 `;
 
 export const SocialLink = styled.a`
+    transition: 0.3s;
 
+    &:hover{
+        transform: scale(1.2);
+    }
 `;
-
-
-

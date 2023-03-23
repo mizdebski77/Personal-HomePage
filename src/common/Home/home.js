@@ -1,5 +1,5 @@
 import React from 'react';
-import { Span, Text, BigText, TextBox, Wrapper, DownloadButton, SocialsContainer, SocialImage, SocialLink } from './styledHome';
+import { Span, Text, BigText, TextBox, Wrapper, SocialsContainer, SocialImage, SocialLink, MyStyledSvg, StyledSVG } from './styledHome';
 import gh from '../Images/gh.svg'
 import lin from '../Images/lin.svg'
 import gma from '../Images/gma.svg'
@@ -15,7 +15,6 @@ export const Home = () => {
                 <BigText><Span>Marcin</Span> Izdebski</BigText>
                 <Text> Frontend React Developer</Text>
                 <SocialsContainer>
-                    <DownloadButton>Download CV</DownloadButton>
                     <SocialLink target={'_blank'} href='https://github.com/mizdebski77'>
                         <SocialImage src={gh} />
                     </SocialLink>

@@ -5,11 +5,11 @@ export const Navbar = () => {
     return (
         <Wrapper>
             <NavbarContent>
-                <Logo>Logo</Logo>
+                <Logo>Marcin Izdebski</Logo>
                 <LinksContainer>
                     <Links>About</Links>
-                    <Links>Education</Links>
                     <Links>Skills</Links>
+                    <Links>Education</Links>
                     <Links>Portfolio</Links>
                     <Links>Contact</Links>
                 </LinksContainer>

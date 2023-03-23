@@ -5,16 +5,12 @@ import { Navbar } from "../common/Navbar/navbar";
 
 function App() {
   return (
-    <HashRouter>
+    <>
       <Navbar />
-      <Switch>
-        <>
-        <Home />
-        <About />
-        </>
+      <Home />
+      <About />
+    </>
 
-      </Switch>
-    </HashRouter>
 
   );
 }

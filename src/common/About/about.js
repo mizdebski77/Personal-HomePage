@@ -3,7 +3,7 @@ import { SectionInformation, DataContainer, Wrapper, TextContainer, Photo, Infor
 import prof from '../Images/prof.png';
 export const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id = "about">
       <TextContainer>
         <SectionInformation> About </SectionInformation>
       </TextContainer>

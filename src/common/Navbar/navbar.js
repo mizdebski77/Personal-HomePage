@@ -7,7 +7,12 @@ export const Navbar = () => {
             <NavbarContent>
                 <Logo>Marcin Izdebski</Logo>
                 <LinksContainer>
-                    <Links>About</Links>
+                    <Links 
+                    to = "about"
+                    spy = {true}
+                    smooth = {true}
+                    duration = {1000}
+                    >About</Links>
                     <Links>Skills</Links>
                     <Links>Education</Links>
                     <Links>Portfolio</Links>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
@@ -33,4 +33,5 @@ export const Links = styled(Link)`
     color: ${({theme}) => theme.color.white};
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
 `;

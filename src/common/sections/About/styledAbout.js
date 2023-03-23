@@ -18,7 +18,7 @@ export const TextContainer = styled.div`
     width: 300px;
 `;
 
-const InAnimation = keyframes`
+const titleInAnimation = keyframes`
   from {
     left: -10%;
   }
@@ -27,9 +27,19 @@ const InAnimation = keyframes`
   }
 `;
 
+const inAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
 
 
-export const SectionInformation = styled.h1`
+export const Title = styled.h1`
   color: white;
   position: absolute;
   left: 150px;
@@ -37,15 +47,20 @@ export const SectionInformation = styled.h1`
   font-size: 124px;
   transition: all 0.5s 0.6s ease-out;
   letter-spacing: 2.5rem;
-  display: inline-block;
   transform: translate(-50%, -50%) rotate(-90deg);
   opacity: 20%;
   text-transform: uppercase;
-
+  display: none;
+  
   ${({ scrolled }) => scrolled && css`
-    animation: ${InAnimation} 2s;
-  `} 
+  display: inline-block;
+  animation: ${titleInAnimation} 1s;
+
+    `} 
+  
 `;
+
+
 
 export const DataContainer = styled.div`
     display: flex;
@@ -56,17 +71,23 @@ export const Photo = styled.img`
     width: 350px;
     border: 6px solid ${({ theme }) => theme.color.white};
     box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
+    display: none;
+
     ${({ scrolled }) => scrolled && css`
-    animation: ${InAnimation} 2s;
+    display: block;
+    animation-delay: 1s;
+    animation: ${inAnimation} 1s;
   `}
 `;
 
 export const InformationWrapper = styled.div`
-    display: grid;
     max-width: 480px;
     animation-delay: 1s;
+    display: none;
+
     ${({ scrolled }) => scrolled && css`
-    animation: ${InAnimation} 2s;
+    display: grid;
+    animation: ${inAnimation} 1s;
   `}
 `;
 

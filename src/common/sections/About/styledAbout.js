@@ -1,4 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+
 
 export const Wrapper = styled.section`
     min-height: 100vh;
@@ -16,18 +18,33 @@ export const TextContainer = styled.div`
     width: 300px;
 `;
 
-export const SectionInformation = styled.h1`
-    color: white;
-    position: absolute;
+const InAnimation = keyframes`
+  from {
+    left: -10%;
+  }
+  to {
     left: 150px;
-    margin: 0;
-    font-size: 124px;
-    transition: all .5s .6s ease-out;
-    letter-spacing: 2.5rem;
-    display: inline-block;
-    transform: translate(-50%,-50%) rotate(-90deg);
-    opacity: 20%;
-    text-transform: uppercase;
+  }
+`;
+
+
+
+export const SectionInformation = styled.h1`
+  color: white;
+  position: absolute;
+  left: 150px;
+  margin: 0;
+  font-size: 124px;
+  transition: all 0.5s 0.6s ease-out;
+  letter-spacing: 2.5rem;
+  display: inline-block;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  opacity: 20%;
+  text-transform: uppercase;
+
+  ${({ scrolled }) => scrolled && css`
+    animation: ${InAnimation} 2s;
+  `} 
 `;
 
 export const DataContainer = styled.div`
@@ -39,11 +56,18 @@ export const Photo = styled.img`
     width: 350px;
     border: 6px solid ${({ theme }) => theme.color.white};
     box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
+    ${({ scrolled }) => scrolled && css`
+    animation: ${InAnimation} 2s;
+  `}
 `;
 
 export const InformationWrapper = styled.div`
     display: grid;
     max-width: 480px;
+    animation-delay: 1s;
+    ${({ scrolled }) => scrolled && css`
+    animation: ${InAnimation} 2s;
+  `}
 `;
 
 export const InformationContainer = styled.div`
@@ -71,7 +95,7 @@ export const Informations = styled.h1`
 `;
 
 export const Text = styled.h3`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     font-weight: normal;
     font-size: 14px;
     font-style: italic;

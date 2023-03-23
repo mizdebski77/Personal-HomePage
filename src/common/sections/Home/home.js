@@ -1,9 +1,9 @@
 import React from 'react';
 import { Span, Text, BigText, TextBox, Wrapper, SocialsContainer, SocialImage, SocialLink,} from './styledHome';
-import gh from '../Images/gh.svg'
-import lin from '../Images/lin.svg'
-import gma from '../Images/gma.svg'
-import mess from '../Images/mess.svg'
+import gh from '../../Images/gh.svg'
+import lin from '../../Images/lin.svg'
+import gma from '../../Images/gma.svg'
+import mess from '../../Images/mess.svg'
 
 
 export const Home = () => {

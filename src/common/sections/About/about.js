@@ -1,6 +1,6 @@
 import React from 'react';
-import { SectionInformation, DataContainer, Wrapper, TextContainer, Photo, Informations, Text, InformationContainer, InformationWrapper, Big } from './styledAbout';
-import prof from '../Images/prof.png';
+import { SectionInformation, DataContainer, Wrapper, TextContainer, Photo, Informations, Text, InformationContainer, InformationWrapper } from '../About/styledAbout';
+import prof from '../../Images/prof.png';
 export const About = () => {
   return (
     <Wrapper id = "about">

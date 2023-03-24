@@ -18,7 +18,7 @@ export const Skills = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 1100 && window.scrollY < 2700) {
+        if (window.scrollY > 1100 && window.scrollY < 2750) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false)

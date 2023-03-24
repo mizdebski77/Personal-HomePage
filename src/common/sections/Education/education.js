@@ -7,7 +7,7 @@ export const Education = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 2300) {
+        if (window.scrollY > 2100) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false);

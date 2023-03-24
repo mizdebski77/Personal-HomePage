@@ -1,77 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
+import { leftAnimation, rightAnimation } from "../../animationsStore";
 
-
-export const Wrapper = styled.section`
-    min-height: 100vh;
-    background: ${({ theme }) => theme.color.mainColor};
-    padding: 50px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-`;
-
-export const TextContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 300px;
-`;
-
-const titleInAnimation = keyframes`
-  from {
-    right: 0px
-  }
-  to {
-    right: 200px;
-  }
-`;
-
-const inLeftAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-200%);
-  } to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-`;
-
-const inRightAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(200%);
-  } to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-`;
-
-
-export const Title = styled.h1`
-  color: ${({ theme }) => theme.color.white};
-  position: absolute;
-  right: 200px; 
-  margin: 0;
-  font-size: 124px;
-  transition: all 0.5s 0.6s ease-out;
-  letter-spacing: 2.5rem;
-  transform: translate(50%, -50%) rotate(-90deg);
-  opacity: 20%;
-  text-transform: uppercase;
-  display: none;
-  
-  ${({ scrolled }) => scrolled && css`
-    display: inline-block;
-    animation: ${titleInAnimation} 1s;
-  `} 
-`;
-
-
-export const DataContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-`;
 
 export const Category = styled.div`
   background: ${({ theme }) => theme.color.secondColor};
@@ -83,11 +12,11 @@ export const Category = styled.div`
 
   ${({ scrolledLeft }) => scrolledLeft && css`
   display: block;
-  animation: ${inLeftAnimation} 1s;
+  animation: ${leftAnimation} 1s;
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
-  animation: ${inRightAnimation} 1s;
+  animation: ${rightAnimation} 1s;
   display: block;
 
   `} 

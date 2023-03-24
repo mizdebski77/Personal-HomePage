@@ -11,16 +11,22 @@ export const Navbar = () => {
                         to="about"
                         spy={true}
                         smooth={true}
-                        duration={1500}
-                    >About</Links>
+                        duration={1500}>
+                        About</Links>
                     <Links
                         to="skills"
                         spy={true}
                         smooth={true}
-                        offset = {-50}
+                        offset={-50}
                         duration={1500} >
                         Skills</Links>
-                    <Links>Education</Links>
+                    <Links
+                        to="education"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration={1500} >
+                        Education</Links>
                     <Links>Portfolio</Links>
                     <Links>Contact</Links>
                 </LinksContainer>

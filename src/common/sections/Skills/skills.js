@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Category, CategoryTitle, Color, DataContainer, FlagIcon, IconContainer, Level, List, ListItem, PictureCaption, ProgramIcon, TextContainer, Title, Wrapper } from './styledSkills';
+import { Category, CategoryTitle, Color, FlagIcon, IconContainer, Level, List, ListItem, PictureCaption, ProgramIcon,  } from './styledSkills';
 import PS from '../../Images/ps.png'
 import PP from '../../Images/pp.png'
 import FL from '../../Images/fl.png'
@@ -9,6 +9,7 @@ import AE from '../../Images/ae.png'
 import PL from '../../Images/Flags/pl.png'
 import ENG from '../../Images/Flags/gb.png'
 import GER from '../../Images/Flags/de.png'
+import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 
 
 
@@ -65,7 +66,7 @@ export const Skills = () => {
     ]
 
     return (
-        <Wrapper id="skills">
+        <Wrapper RightWrapper id="skills">
             <DataContainer>
                 <Category scrolledLeft={scrolledNavbar}>
                     <CategoryTitle>Skillset </CategoryTitle>
@@ -136,13 +137,11 @@ export const Skills = () => {
                         </IconContainer>
                     </List>
                 </Category>
-
-
-
             </DataContainer>
-            <TextContainer>
-                <Title scrolled={scrolledNavbar}> Skills </Title>
-            </TextContainer>
+
+            <TitleContainer>
+                <Title RightTitle  scrolled={scrolledNavbar}> Skills </Title>
+            </TitleContainer>
 
         </Wrapper>
     );

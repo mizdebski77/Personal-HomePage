@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Title, DataContainer, Wrapper, TextContainer, Photo, Informations, Text, InformationContainer, InformationWrapper } from '../About/styledAbout';
+import { Photo, Informations, Text, InformationContainer, InformationWrapper, DataContainer } from '../About/styledAbout';
 import prof from '../../Images/prof.png';
+import {  Title, TitleContainer, Wrapper } from '../../storeElements';
 export const About = () => {
 
   const [scrolledNavbar, setScrolledNavbar] = useState(false);
@@ -16,10 +17,10 @@ export const About = () => {
   window.addEventListener("scroll", isWindowScroll);
 
   return (
-    <Wrapper id="about">
-      <TextContainer>
-        <Title scrolled={scrolledNavbar} scrolledNavbar={scrolledNavbar}> About </Title>
-      </TextContainer>
+    <Wrapper leftWrapper  id="about">
+      <TitleContainer>
+        <Title leftTitle  scrolled={scrolledNavbar} scrolledNavbar={scrolledNavbar}> About </Title>
+      </TitleContainer>
       <DataContainer>
         <Photo src={prof} scrolled={scrolledNavbar} />
         <InformationWrapper scrolled={scrolledNavbar}>

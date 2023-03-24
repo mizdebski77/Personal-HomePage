@@ -1,32 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
 
-
-export const Wrapper = styled.section`
-    min-height: 100vh;
-    background: ${({ theme }) => theme.color.mainColor};
-    padding: 50px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr;
-`;
-
-export const TextContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 300px;
-`;
-
-const titleInAnimation = keyframes`
-  from {
-    left: -10%;
-  }
-  to {
-    left: 150px;
-  }
-`;
-
 const inAnimation = keyframes`
   from {
     opacity: 0;
@@ -37,30 +11,6 @@ const inAnimation = keyframes`
     transform: translateX(0%);
   }
 `;
-
-
-export const Title = styled.h1`
-  color: white;
-  position: absolute;
-  left: 150px;
-  margin: 0;
-  font-size: 124px;
-  transition: all 0.5s 0.6s ease-out;
-  letter-spacing: 2.5rem;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  opacity: 20%;
-  text-transform: uppercase;
-  display: none;
-  
-  ${({ scrolled }) => scrolled && css`
-  display: inline-block;
-  animation: ${titleInAnimation} 1s;
-  
-    `} 
-  
-`;
-
-
 
 export const DataContainer = styled.div`
     display: flex;

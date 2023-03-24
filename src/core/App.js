@@ -5,6 +5,7 @@ import { Home } from "../common/sections/Home/home";
 import { Skills } from "../common/sections/Skills/skills";
 
 function App() {
+
   return (
     <>
       <Navbar />

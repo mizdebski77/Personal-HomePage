@@ -1,48 +1,57 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
+import { leftAnimation, rightAnimation } from "../../animationsStore";
 
-export const Wrapper = styled.section`
-    min-height: 100vh;
-    background: ${({ theme }) => theme.color.mainColor};
-    padding: 50px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr;
+export const ContentWrapper = styled.main`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
-
-const titleInAnimation = keyframes`
-  from {
-    left: -10%;
-  }to {
-    left: 150px;
-  }
-`;
-
-export const TextContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 300px;
-`;
-
-
-export const Title = styled.h1`
-  color: white;
-  position: absolute;
-  left: 150px;
-  margin: 0;
-  font-size: 100px;
-  transition: all 0.5s 0.6s ease-out;
-  letter-spacing: 1.7rem;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  opacity: 20%;
-  text-transform: uppercase;
-  border-bottom: 1px solid ${({theme}) => theme.color.white};
-  
-  ${({ scrolled }) => scrolled && css`
-  display: inline-block;
-  animation: ${titleInAnimation} 1s;
+export const Category = styled.h1` 
+  color: ${({ theme }) => theme.color.fontSecond};
+  font-size: 56px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid ${({ theme }) => theme.color.fontSecond};
+  width: 80%;
+  margin: 0 auto;
+  display: none
+  ;
+  ${({ scrolledLeft }) => scrolledLeft && css`
+  display: inline;
+  animation: ${leftAnimation} 1.5s;
   `} 
+
+  ${({ scrolledRight }) => scrolledRight && css`
+  animation: ${rightAnimation} 1.5s;
+  display: inline;
+  `}
+`;
+
+export const InformationWrapper = styled.div`
+  display: grid;
+  width: 80%;
+  font-size: 24px;
+  color:${({ theme }) => theme.color.white};
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid ${({ theme }) => theme.color.white};
+  font-style: italic;
+  align-items: center;
+  display: none;
+
+  ${({ scrolledLeft }) => scrolledLeft && css`
+  display: inline;
+  animation: ${leftAnimation} 1.5s;
+  `} 
+
+  ${({ scrolledRight }) => scrolledRight && css`
+  animation: ${rightAnimation} 1.5s;
+  display: inline;
+  `} 
+`;
+
+export const Color = styled.span`
+  color:${({ theme }) => theme.color.fontSecond};
 `;
 
 

@@ -18,7 +18,7 @@ export const Skills = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 1200 && window.scrollY < 2700) {
+        if (window.scrollY > 1100 && window.scrollY < 2700) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false)
@@ -68,7 +68,7 @@ export const Skills = () => {
     return (
         <Wrapper RightWrapper id="skills">
             <DataContainer>
-                <Category scrolledLeft={scrolledNavbar}>
+                <Category scrolledRight={scrolledNavbar}>
                     <CategoryTitle>Skillset </CategoryTitle>
                     <List>
                         {skillset[0].skills.map((item, index) => (
@@ -76,7 +76,7 @@ export const Skills = () => {
                         ))}
                     </List>
                 </Category>
-                <Category scrolledRight={scrolledNavbar}>
+                <Category scrolledLeft={scrolledNavbar}>
                     <CategoryTitle> What i want to learn</CategoryTitle>
                     <List>
                         {skillset[1].goals.map((item, index) => (
@@ -84,7 +84,7 @@ export const Skills = () => {
                         ))}
                     </List>
                 </Category>
-                <Category scrolledLeft={scrolledNavbar}>
+                <Category scrolledRight={scrolledNavbar}>
                     <CategoryTitle> Language</CategoryTitle>
                     <List flags>
                         <IconContainer flags>
@@ -108,7 +108,7 @@ export const Skills = () => {
                     </List>
                 </Category>
 
-                <Category icons scrolledRight={scrolledNavbar}>
+                <Category icons scrolledLeft={scrolledNavbar}>
                     <CategoryTitle> Programs</CategoryTitle>
                     <List icons>
                         <IconContainer>

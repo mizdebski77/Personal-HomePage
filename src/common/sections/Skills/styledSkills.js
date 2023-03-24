@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import { leftAnimation, rightAnimation } from "../../animationsStore";
 
 
@@ -7,18 +7,17 @@ export const Category = styled.div`
   padding: 10px 20px 10px 20px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: -6px 6px 5px ${({theme}) => theme.color.white};
+  box-shadow: -6px 6px 5px ${({ theme }) => theme.color.white};
   display: none;
 
   ${({ scrolledLeft }) => scrolledLeft && css`
-  display: block;
-  animation: ${leftAnimation} 1s;
+  display: inline;
+  animation: ${leftAnimation} 1.5s;
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
-  animation: ${rightAnimation} 1s;
-  display: block;
-
+  animation: ${rightAnimation} 1.5s;
+  display: inline;
   `} 
 `;
 
@@ -28,7 +27,7 @@ export const CategoryTitle = styled.h1`
   font-size: 32px;
   margin: 0;
   text-transform: uppercase;
-  border-bottom: 2px solid ${({theme}) => theme.color.white};
+  border-bottom: 2px solid ${({ theme }) => theme.color.white};
 `;
 
 export const List = styled.ul`
@@ -71,7 +70,7 @@ export const IconContainer = styled.div`
     display: grid;
     justify-content: center;
 
-    ${({flags}) => flags && css`
+    ${({ flags }) => flags && css`
     width: auto;
     margin-top: 45px;
     `};
@@ -90,18 +89,18 @@ export const PictureCaption = styled.figcaption`
 export const FlagIcon = styled.img`
   width: 130px;
   border-radius: 10px;
-  box-shadow: 0 0 16px ${({theme}) => theme.color.fontMain};
+  box-shadow: 0 0 16px ${({ theme }) => theme.color.fontMain};
 `;
 
 export const Level = styled.h1`
   display: flex;
   font-size: 35px;
-  color: ${({theme}) => theme.color.black};
+  color: ${({ theme }) => theme.color.black};
   margin: 0;
 `;
 
 export const Color = styled.span`
-  color: ${({theme}) => theme.color.white};
+  color: ${({ theme }) => theme.color.white};
 
 `;
 

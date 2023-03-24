@@ -45,6 +45,11 @@ export const Title = styled.h1`
     display: inline;
     animation: ${titleLeftAnimation} 1s;
   `} 
+  
+  ${({BigTitle}) => BigTitle && css`
+      letter-spacing: 1.6rem;
+      font-size: 100px;
+    `}
   `};
 
   ${({ RightTitle }) => RightTitle && css`

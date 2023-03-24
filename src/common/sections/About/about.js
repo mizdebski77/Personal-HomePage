@@ -6,6 +6,7 @@ export const About = () => {
 
   const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
+
   const isWindowScroll = () => {
     if (window.scrollY > 200 && window.scrollY < 1800 ) {
       setScrolledNavbar(true);
@@ -19,7 +20,7 @@ export const About = () => {
   return (
     <Wrapper leftWrapper  id="about">
       <TitleContainer>
-        <Title leftTitle  scrolled={scrolledNavbar} scrolledNavbar={scrolledNavbar}> About </Title>
+        <Title leftTitle  scrolled={scrolledNavbar}> About </Title>
       </TitleContainer>
       <DataContainer>
         <Photo src={prof} scrolled={scrolledNavbar} />

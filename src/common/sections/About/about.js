@@ -13,7 +13,6 @@ export const About = () => {
       }
   };
 
-console.log(window.scrollY);
   window.addEventListener("scroll", isWindowScroll);
 
   return (

@@ -75,14 +75,12 @@ export const Photo = styled.img`
 
     ${({ scrolled }) => scrolled && css`
     display: block;
-    animation-delay: 1s;
     animation: ${inAnimation} 1s;
   `}
 `;
 
 export const InformationWrapper = styled.div`
     max-width: 480px;
-    animation-delay: 1s;
     display: none;
 
     ${({ scrolled }) => scrolled && css`

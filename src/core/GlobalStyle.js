@@ -17,5 +17,6 @@ html {
   margin: 0;
   min-height: 100vh;
   word-break: break-word;
+  overflow-x: hidden
   }
   `;

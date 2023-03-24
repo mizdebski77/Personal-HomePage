@@ -7,19 +7,25 @@ export const Navbar = () => {
             <NavbarContent>
                 <Logo>Marcin Izdebski</Logo>
                 <LinksContainer>
-                    <Links 
-                    to = "about"
-                    spy = {true}
-                    smooth = {true}
-                    duration = {1000}
+                    <Links
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        duration={1500}
                     >About</Links>
-                    <Links>Skills</Links>
+                    <Links
+                        to="skills"
+                        spy={true}
+                        smooth={true}
+                        offset = {-50}
+                        duration={1500} >
+                        Skills</Links>
                     <Links>Education</Links>
                     <Links>Portfolio</Links>
                     <Links>Contact</Links>
                 </LinksContainer>
             </NavbarContent>
 
-        </Wrapper>
+        </Wrapper >
     );
 };

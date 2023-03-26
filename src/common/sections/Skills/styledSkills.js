@@ -83,11 +83,13 @@ export const ProgramIcon = styled.img`
 
 export const PictureCaption = styled.figcaption`
   font-weight: bold;
+  padding-top: 10px;
   
 `;
 
 export const FlagIcon = styled.img`
   width: 130px;
+  height: 80px;
   border-radius: 10px;
   box-shadow: 0 0 16px ${({ theme }) => theme.color.fontMain};
 `;

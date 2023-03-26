@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { getRepositories } from './getAPI';
-import { fetchRepositoriesError, fetchRepositoriesSuccess, selectRepos } from './ghSlice';
 
 export const Portfolio = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 3500) {
+        if (window.scrollY > 3000) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false)

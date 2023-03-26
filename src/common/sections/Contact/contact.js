@@ -5,14 +5,14 @@ import phone from "../../Images/phone.svg"
 import mail from "../../Images/mail.svg"
 import website from "../../Images/website.svg"
 import emailjs from '@emailjs/browser';
-import {  message } from 'antd';
+import { message } from 'antd';
 
 
 export const Contact = () => {
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
-        if (window.scrollY > 3100) {
+        if (window.scrollY > 4100) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false);
@@ -31,6 +31,7 @@ export const Contact = () => {
         message.error('Email has not been sent. Try again!');
     };
 
+    console.log(window.scrollY);
 
 
     const form = useRef();
@@ -44,16 +45,15 @@ export const Contact = () => {
                 event.target.reset();
                 handleSendEmailSuccess();
             }
-        }, (error) => {
+        }, () => {
             handleSendEmailError();
-            console.log(error.text);
         });
     };
 
     return (
         <Wrapper leftWrapper id="contact" >
             <TitleContainer>
-                <Title leftTitle scrolled = {scrolledNavbar} > Contact </Title>
+                <Title leftTitle scrolled={scrolledNavbar} > Contact </Title>
             </TitleContainer>
             <DataContainer>
                 <Form onSubmit={sendEmail} ref={form} scrolledLeft={scrolledNavbar}>

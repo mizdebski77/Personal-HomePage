@@ -11,6 +11,7 @@ export const Navbar = () => {
                         to="about"
                         spy={true}
                         smooth={true}
+                        offset={-50}
                         duration={1500}>
                         About</Links>
                     <Links
@@ -24,11 +25,17 @@ export const Navbar = () => {
                         to="education"
                         spy={true}
                         smooth={true}
-                        offset={-50}
+                        offset={-25}
                         duration={1500} >
                         Education</Links>
                     <Links>Portfolio</Links>
-                    <Links>Contact</Links>
+                    <Links
+                        to = "contact"
+                        spy = {true}
+                        smooth = {true}
+                        duration = {1500}
+                        offset = {-25}
+                    >Contact</Links>
                 </LinksContainer>
             </NavbarContent>
 

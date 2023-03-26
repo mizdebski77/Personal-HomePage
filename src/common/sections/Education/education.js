@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { Category, Color, Content, EduWrapper, InformationWrapper } from './styledEducation';
+import { Category, Color,InformationWrapper } from './styledEducation';
 
 export const Education = () => {
 

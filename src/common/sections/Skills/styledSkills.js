@@ -8,16 +8,16 @@ export const Category = styled.div`
   text-align: center;
   border-radius: 10px;
   box-shadow: -6px 6px 5px ${({ theme }) => theme.color.white};
-  display: none;
+  visibility: hidden;
 
   ${({ scrolledLeft }) => scrolledLeft && css`
-  display: inline;
+  visibility: visible;
   animation: ${leftAnimation} 1.5s;
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
-  display: inline;
+  visibility: visible;
   `} 
 `;
 

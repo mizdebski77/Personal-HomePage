@@ -21,20 +21,21 @@ export const Photo = styled.img`
     width: 350px;
     border: 6px solid ${({ theme }) => theme.color.white};
     box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
-    display: none;
+    visibility: hidden;
 
     ${({ scrolled }) => scrolled && css`
-    display: block;
+    visibility: visible;
     animation: ${inAnimation} 1s;
   `}
 `;
 
 export const InformationWrapper = styled.div`
     max-width: 480px;
-    display: none;
+    display: grid;
+    visibility: hidden;
 
     ${({ scrolled }) => scrolled && css`
-    display: grid;
+    visibility: visible;
     animation: ${inAnimation} 1s;
   `}
 `;

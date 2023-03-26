@@ -30,10 +30,9 @@ export const Title = styled.h1`
   margin: 0;
   font-size: 124px;
   transition: all 0.5s 0.6s ease-out;
-  letter-spacing: 2.5rem;
+  letter-spacing: 2rem;
   opacity: 20%;
   text-transform: uppercase;
-  display: none;
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
 
   ${({ leftTitle }) => leftTitle && css`
@@ -48,7 +47,7 @@ export const Title = styled.h1`
   
   ${({BigTitle}) => BigTitle && css`
       letter-spacing: 1.6rem;
-      font-size: 100px;
+      font-size: 110px;
     `}
   `};
 
@@ -71,5 +70,6 @@ export const DataContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
 `;
 

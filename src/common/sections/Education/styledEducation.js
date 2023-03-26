@@ -14,16 +14,16 @@ export const Category = styled.h1`
   border: 2px solid ${({ theme }) => theme.color.fontSecond};
   width: 80%;
   margin: 0 auto;
-  display: none
+  visibility: hidden;
   ;
   ${({ scrolledLeft }) => scrolledLeft && css`
-  display: inline;
+  visibility: visible;
   animation: ${leftAnimation} 1.5s;
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
-  display: inline;
+  visibility: visible;
   `}
 `;
 
@@ -37,16 +37,16 @@ export const InformationWrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.white};
   font-style: italic;
   align-items: center;
-  display: none;
+  visibility: hidden;
 
   ${({ scrolledLeft }) => scrolledLeft && css`
-  display: inline;
+  visibility: visible;
   animation: ${leftAnimation} 1.5s;
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
-  display: inline;
+  visibility: visible;
   `} 
 `;
 

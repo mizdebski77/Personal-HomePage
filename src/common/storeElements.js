@@ -34,6 +34,7 @@ export const Title = styled.h1`
   opacity: 20%;
   text-transform: uppercase;
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
+  display: none;
 
   ${({ leftTitle }) => leftTitle && css`
   left: 150px;
@@ -41,7 +42,7 @@ export const Title = styled.h1`
   right: none;
 
   ${({ scrolled }) => scrolled && css`
-    display: inline;
+  display: inline;
     animation: ${titleLeftAnimation} 1s;
   `} 
   
@@ -56,8 +57,8 @@ export const Title = styled.h1`
   right: 200px; 
 
   ${({ scrolled }) => scrolled && css`
-    display: inline;
-    animation: ${titleRightAnimation} 1s;
+  display: inline;
+  animation: ${titleRightAnimation} 1s;
   `} 
   `};
   

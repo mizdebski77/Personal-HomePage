@@ -36,6 +36,11 @@ export const Title = styled.h1`
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
   display: none;
 
+  ${({BigTitle}) => BigTitle && css`
+      letter-spacing: 1.6rem;
+      font-size: 110px;
+    `}
+
   ${({ leftTitle }) => leftTitle && css`
   left: 150px;
   transform: translate(-50%, -50%) rotate(-90deg);
@@ -46,10 +51,7 @@ export const Title = styled.h1`
     animation: ${titleLeftAnimation} 1s;
   `} 
   
-  ${({BigTitle}) => BigTitle && css`
-      letter-spacing: 1.6rem;
-      font-size: 110px;
-    `}
+
   `};
 
   ${({ RightTitle }) => RightTitle && css`

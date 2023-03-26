@@ -1,14 +1,27 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 import { ContactDataWrapper, ContactTitle, Form, Input, Message, SendButton, ContactLink, SVGIcon } from './styledContact';
 import phone from "../../Images/phone.svg"
 import mail from "../../Images/mail.svg"
 import website from "../../Images/website.svg"
 import emailjs from '@emailjs/browser';
-import { Modal, message } from 'antd';
+import {  message } from 'antd';
 
 
 export const Contact = () => {
+
+    const [scrolledNavbar, setScrolledNavbar] = useState(false);
+    const isWindowScroll = () => {
+        if (window.scrollY > 3100) {
+            setScrolledNavbar(true);
+        } else {
+            setScrolledNavbar(false);
+        };
+    };
+
+    window.addEventListener("scroll", isWindowScroll);
+
+
 
     const handleSendEmailSuccess = () => {
         message.success('E-mail was sent!');
@@ -18,7 +31,7 @@ export const Contact = () => {
         message.error('Email has not been sent. Try again!');
     };
 
-    
+
 
     const form = useRef();
 
@@ -40,10 +53,10 @@ export const Contact = () => {
     return (
         <Wrapper leftWrapper id="contact" >
             <TitleContainer>
-                <Title leftTitle > Contact </Title>
+                <Title leftTitle scrolled = {scrolledNavbar} > Contact </Title>
             </TitleContainer>
             <DataContainer>
-                <Form onSubmit={sendEmail} ref={form}>
+                <Form onSubmit={sendEmail} ref={form} scrolledLeft={scrolledNavbar}>
                     <Input name="name" placeholder='Name *' required />
                     <Input name="email" placeholder='Email *' required />
                     <Message name="message" placeholder='Message * ' />
@@ -51,8 +64,8 @@ export const Contact = () => {
 
                 </Form>
 
-                <ContactDataWrapper>
-                    <ContactTitle> <SVGIcon src={phone} />Phone</ContactTitle>
+                <ContactDataWrapper scrolledRight={scrolledNavbar}>
+                    <ContactTitle > <SVGIcon src={phone} />Phone</ContactTitle>
                     <ContactTitle> <SVGIcon src={mail} />E-Mail</ContactTitle>
                     <ContactTitle> <SVGIcon src={website} />Website</ContactTitle>
                     <ContactLink href="tel:+501375604" >501375604</ContactLink>

@@ -8,7 +8,7 @@ export const About = () => {
 
 
   const isWindowScroll = () => {
-    if (window.scrollY > 200 && window.scrollY < 1800 ) {
+    if (window.scrollY > 200) {
       setScrolledNavbar(true);
       } else {
       setScrolledNavbar(false);

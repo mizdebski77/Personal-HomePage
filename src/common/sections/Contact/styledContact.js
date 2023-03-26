@@ -1,11 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import SVG from "react-inlinesvg";
+import { leftAnimation, rightAnimation } from "../../animationsStore";
 
 export const Form = styled.form`
     display: grid;
     gap: 20px;
     width: 90%;
     margin: auto;
+    visibility: hidden;
+    
+    ${({ scrolledLeft }) => scrolledLeft && css`
+    visibility: visible;
+    animation: ${leftAnimation} 1.5s;
+  `} 
 `;
 
 export const Input = styled.input`
@@ -38,6 +45,14 @@ export const ContactDataWrapper = styled.div`
     grid-auto-rows: min-content;
     gap: 20px;
     align-items: center;
+    visibility: hidden;
+
+    ${({ scrolledRight }) => scrolledRight && css`
+    animation: ${rightAnimation} 1.5s;
+    visibility: visible;
+  `}
+
+
 `;
 
 export const SVGIcon = styled(SVG)`
@@ -80,4 +95,9 @@ export const ContactLink = styled.a`
     font-size: 16px;
     text-align: center;
     font-style: italic;
+    transition: 0.3s;
+
+    &:hover {
+        color: ${({theme}) => theme.color.fontSecond};
+    }
 `;

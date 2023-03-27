@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { ContactDataWrapper, ContactTitle, Form, Input, Message, SendButton, ContactLink, SVGIcon } from './styledContact';
+import { ContactDataWrapper, ContactTitle, Form, Input, Message, SendButton, ContactLink, SVGIcon, EmailMe } from './styledContact';
 import phone from "../../Images/phone.svg"
 import mail from "../../Images/mail.svg"
 import website from "../../Images/website.svg"
@@ -9,6 +9,7 @@ import { message } from 'antd';
 
 
 export const Contact = () => {
+
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
@@ -31,7 +32,6 @@ export const Contact = () => {
         message.error('Email has not been sent. Try again!');
     };
 
-    console.log(window.scrollY);
 
 
     const form = useRef();
@@ -57,6 +57,7 @@ export const Contact = () => {
             </TitleContainer>
             <DataContainer>
                 <Form onSubmit={sendEmail} ref={form} scrolledLeft={scrolledNavbar}>
+                    <EmailMe>If you have a question, please send me an E-mail</EmailMe>
                     <Input name="name" placeholder='Name *' required />
                     <Input name="email" placeholder='Email *' required />
                     <Message name="message" placeholder='Message * ' />

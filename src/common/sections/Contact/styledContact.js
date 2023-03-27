@@ -15,6 +15,13 @@ export const Form = styled.form`
   `} 
 `;
 
+export const EmailMe = styled.h1`
+    color: ${({theme}) => theme.color.fontSecond};
+    text-align: center;
+    margin:0 0 20px 0;
+    font-weight: normal;
+`;
+
 export const Input = styled.input`
     padding: 10px;
     font-size: 20px;
@@ -66,6 +73,8 @@ export const ContactTitle = styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: normal;
+
 `;
 
 export const SendButton = styled.button`

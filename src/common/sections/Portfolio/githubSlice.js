@@ -27,6 +27,6 @@ export const { fetchRepos, fetchReposError, fetchReposSuccess } = githubSlice.ac
 export const selectGHState = state => state.github;
 
 export const selectRepositories = state => selectGHState(state).repos;
-export const status = state => selectGHState(state).reposStatus;
+export const fetchStatus = state => selectGHState(state).status;
 
 export default githubSlice.reducer;

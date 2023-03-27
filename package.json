@@ -1,6 +1,7 @@
 {
   "name": "personal-homepage",
   "version": "0.1.0",
+  "homepage": "https://mizdebski77.github.io/Personal-HomePage/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",

@@ -9,7 +9,7 @@ import { SocialImage, SocialLink, SocialsContainer } from '../../storeElements';
 
 export const Home = () => {
     return (
-        <Wrapper>
+        <Wrapper id="home">
             <TextBox>
                 <Text> Hello</Text>
                 <BigText> I'm </BigText>

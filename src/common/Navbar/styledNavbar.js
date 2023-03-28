@@ -17,10 +17,11 @@ export const NavbarContent = styled.section`
     padding: 20px;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled(Link)`
     color: ${({ theme }) => theme.color.fontSecond};
     font-weight: bold;
     font-size: 30px;
+    cursor: pointer;
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
       font-size: 24px;

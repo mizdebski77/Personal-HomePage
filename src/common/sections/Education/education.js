@@ -25,7 +25,7 @@ export const Education = () => {
     return (
         <Wrapper leftWrapper id="education">
             <TitleContainer>
-                <Title BigTitle leftTitle scrolled={scrolledNavbar}> Education </Title>
+                <Title BigTitle leftTitle scrolled={scrolledNavbar}> Education</Title>
             </TitleContainer>
             <DataContainer >
                 <InformationContainer>

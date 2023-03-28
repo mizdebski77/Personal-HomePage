@@ -5,9 +5,9 @@ import { fetchRepos, selectRepositories } from './githubSlice';
 import { LinkContainer, LinkTitle, ProjectLink, ProjectTitle, ProjectWrapper } from './styledPortfolio';
 
 export const Portfolio = () => {
-
     const Repositories = useSelector(selectRepositories);
     const dispatch = useDispatch();
+
 
     useEffect(() => {
         dispatch(fetchRepos());
@@ -33,7 +33,7 @@ export const Portfolio = () => {
 
     return (
         <Wrapper RightWrapper id="portfolio" >
-            <DataContainer gh >
+            <DataContainer gh>
                 {Repositories.map((repo, index) => (
                     <ProjectWrapper
                         key={repo.id}

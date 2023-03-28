@@ -81,6 +81,7 @@ export const Title = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     left: none;
     transform: none;
+    display: inline;
   };
 
   ${({ scrolled }) => scrolled && css`
@@ -95,6 +96,7 @@ export const Title = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     transform: none;
     right: none; 
+    display: inline;
   }
 
   ${({ scrolled }) => scrolled && css`
@@ -108,6 +110,12 @@ export const DataContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+    ${({ notSuccess }) =>
+    notSuccess &&
+    css`
+      grid-template-columns: auto;
+    `}
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     grid-template-columns: 1fr;

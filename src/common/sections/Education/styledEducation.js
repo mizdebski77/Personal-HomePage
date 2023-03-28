@@ -62,9 +62,13 @@ export const InformationWrapper = styled.div`
   font-style: italic;
   visibility: hidden;
   min-height: 150px;
+  grid-auto-rows: min-content;
     
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     visibility: visible;
+    padding: 20px 0 20px 0;
+    min-height: 50px;
+
   }
   
   

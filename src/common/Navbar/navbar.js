@@ -15,7 +15,13 @@ export const Navbar = () => {
         <>
             <Wrapper>
                 <NavbarContent>
-                    <Logo>Marcin Izdebski</Logo>
+                    <Logo
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration={1500}>
+                    Marcin Izdebski</Logo>
                     <PhoneNavbar onClick={openMenu}>
                         {phoneNavbar ? <AiOutlineClose size={35} color={'rgb(217, 184, 21)'} /> : <AiOutlineMenu size={35} color={'rgb(217, 184, 21)'} />}
                     </PhoneNavbar>
@@ -60,8 +66,8 @@ export const Navbar = () => {
             </Wrapper >
 
 
-            {phoneNavbar  !== null ?
-                <PhoneNavbarContainer phoneNavbar = {phoneNavbar}>
+            {phoneNavbar !== null ?
+                <PhoneNavbarContainer phoneNavbar={phoneNavbar}>
                     <Links
                         to="about"
                         spy={true}

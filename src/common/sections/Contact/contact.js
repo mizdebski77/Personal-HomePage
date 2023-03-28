@@ -6,6 +6,7 @@ import mail from "../../Images/mail.svg"
 import website from "../../Images/website.svg"
 import emailjs from '@emailjs/browser';
 import { message } from 'antd';
+import { useEffect } from 'react';
 
 
 export const Contact = () => {
@@ -20,8 +21,12 @@ export const Contact = () => {
         };
     };
 
-    window.addEventListener("scroll", isWindowScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", isWindowScroll);
 
+        return () => window.removeEventListener("scroll", isWindowScroll)
+
+    }, []);
 
 
     const handleSendEmailSuccess = () => {

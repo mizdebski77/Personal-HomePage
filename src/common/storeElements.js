@@ -36,7 +36,7 @@ export const Title = styled.h1`
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
   display: none;
 
-  ${({BigTitle}) => BigTitle && css`
+  ${({ BigTitle }) => BigTitle && css`
       letter-spacing: 1.6rem;
       font-size: 110px;
     `}
@@ -63,16 +63,16 @@ export const Title = styled.h1`
   animation: ${titleRightAnimation} 1s;
   `} 
   `};
-  
-
-
-
-`;
+  `;
 
 export const DataContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+    ${({ gh }) => gh && css`
+      grid-template-columns: 1fr 1fr 1fr;
+    `};
 
 `;
 

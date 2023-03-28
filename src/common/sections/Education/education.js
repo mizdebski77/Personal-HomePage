@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { Category, Color,InformationWrapper } from './styledEducation';
+import { Category, Color, InformationWrapper } from './styledEducation';
 
 export const Education = () => {
 
@@ -14,8 +15,12 @@ export const Education = () => {
         };
     };
 
-    window.addEventListener("scroll", isWindowScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", isWindowScroll);
 
+        return () => window.removeEventListener("scroll", isWindowScroll)
+
+    }, []);
 
     return (
         <Wrapper leftWrapper id="education">

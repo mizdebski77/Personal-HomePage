@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "homepage": "https://mizdebski77.github.io/Personal-HomePage/",
   "private": true,
-  "homepage": "https://mizdebski77.github.io/Personal-HomePage/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@reduxjs/toolkit": "^1.9.3",

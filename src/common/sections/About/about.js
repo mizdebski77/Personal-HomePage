@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Photo, Informations, Text, InformationContainer, InformationWrapper, DataContainer } from '../About/styledAbout';
 import prof from '../../Images/prof.png';
-import {  Title, TitleContainer, Wrapper } from '../../storeElements';
+import { Title, TitleContainer, Wrapper } from '../../storeElements';
+import { useEffect } from 'react';
 export const About = () => {
 
   const [scrolledNavbar, setScrolledNavbar] = useState(false);
@@ -10,17 +11,22 @@ export const About = () => {
   const isWindowScroll = () => {
     if (window.scrollY > 200) {
       setScrolledNavbar(true);
-      } else {
+    } else {
       setScrolledNavbar(false);
-      }
+    }
   };
 
-  window.addEventListener("scroll", isWindowScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", isWindowScroll);
+
+    return () => window.removeEventListener("scroll", isWindowScroll)
+
+  }, []);
 
   return (
-    <Wrapper leftWrapper  id="about">
+    <Wrapper leftWrapper id="about">
       <TitleContainer>
-        <Title leftTitle  scrolled={scrolledNavbar}> About </Title>
+        <Title leftTitle scrolled={scrolledNavbar}> About </Title>
       </TitleContainer>
       <DataContainer>
         <Photo src={prof} scrolled={scrolledNavbar} />

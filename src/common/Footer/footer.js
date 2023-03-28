@@ -1,6 +1,6 @@
 import React from 'react';
 import { SocialImage, SocialLink, SocialsContainer } from '../storeElements';
-import { Container, FooterCopyrights, Wrapper } from './styledFooter';
+import {FooterCopyrights, Wrapper } from './styledFooter';
 import gh from '../Images/gh.svg'
 import lin from '../Images/lin.svg'
 import gma from '../Images/gma.svg'

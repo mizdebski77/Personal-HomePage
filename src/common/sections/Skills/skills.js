@@ -9,7 +9,7 @@ import AE from '../../Images/ae.png'
 import PL from '../../Images/Flags/pl.png'
 import ENG from '../../Images/Flags/gb.png'
 import GER from '../../Images/Flags/de.png'
-import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
+import { DataContainer, Heszke, Title, TitleContainer, Wrapper } from '../../storeElements';
 
 
 
@@ -18,7 +18,7 @@ export const Skills = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 1100) {
+        if (window.scrollY > 1200) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false)

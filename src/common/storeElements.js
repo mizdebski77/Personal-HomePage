@@ -34,6 +34,8 @@ export const TitleContainer = styled.div`
     width: 300px;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+    width: 90%;
+    margin: 0 auto 20px auto;
   };
 `;
 
@@ -51,15 +53,23 @@ export const Title = styled.h1`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     font-size: 80px;
-    letter-spacing: 1.5rem;
-    margin: 0;
-    position: relative;
-    display: none;
+    letter-spacing: 1.2rem;
+    position: static;
   };
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    font-size: 30px;
+    letter-spacing: 1.2rem;
+    position: static;
+  };
+
+
 
   ${({ BigTitle }) => BigTitle && css`
       letter-spacing: 1.6rem;
       font-size: 110px;
+      word-break: normal;
+
     `}
 
   ${({ leftTitle }) => leftTitle && css`
@@ -68,8 +78,7 @@ export const Title = styled.h1`
     right: none;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-    left: 50%;
-    margin: 0 auto;
+    left: none;
     transform: none;
   };
 
@@ -84,7 +93,7 @@ export const Title = styled.h1`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     transform: none;
-    right: 100px; 
+    right: none; 
   }
 
   ${({ scrolled }) => scrolled && css`

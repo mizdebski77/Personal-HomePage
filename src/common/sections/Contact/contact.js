@@ -14,7 +14,7 @@ export const Contact = () => {
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
-        if (window.scrollY > 4100) {
+        if (window.scrollY > 4200) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false);

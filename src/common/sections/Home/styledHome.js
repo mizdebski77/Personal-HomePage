@@ -17,7 +17,8 @@ export const Wrapper = styled.main`
 `;
 
 export const TextBox = styled.div`
-    width: 800px;
+    max-width: 850px;
+    width: 90%;
     backdrop-filter: blur(3px);
     background: ${({ theme }) => theme.color.boxColor};
     display: grid;
@@ -25,6 +26,11 @@ export const TextBox = styled.div`
     align-items: center;
     gap: 20px;
     padding: 50px 20px 50px 20px;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        text-align: center;
+    }
+
+
 `;
 
 export const BigText = styled.h1`
@@ -32,12 +38,19 @@ export const BigText = styled.h1`
     font-size: 60px;
     font-weight: bold;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 40px;
+    }
 `;
 
 export const Text = styled.h1`
     color: ${({ theme }) => theme.color.white};
     font-weight: normal;
     margin: 0;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 24px;
+    }
 `;
 
 export const Span = styled.span`

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Links, LinksContainer, Logo, NavbarContent, Wrapper } from './styledNavbar';
+import { Links, LinksContainer, Logo, NavbarContent, PhoneNavbarContainer, Wrapper } from './styledNavbar';
 
 export const Navbar = () => {
     return (
@@ -44,6 +44,8 @@ export const Navbar = () => {
                     >Contact</Links>
                 </LinksContainer>
             </NavbarContent>
+
+            <PhoneNavbarContainer>xd</PhoneNavbarContainer>
 
         </Wrapper >
     );

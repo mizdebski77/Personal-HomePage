@@ -37,8 +37,26 @@ export const Links = styled(Link)`
     text-transform: uppercase;
     cursor: pointer;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+        display: none;
+    }
+
     &.${activeClassName} {
     color: ${({ theme }) => theme.color.fontSecond};
     border-bottom: 1px solid ${({ theme }) => theme.color.fontSecond};
+  }
+`;
+
+export const PhoneNavbarContainer = styled.div`
+    background: ${({ theme }) => theme.color.white};
+    width: 100%;
+    min-height: 100px;
+    padding: 20px;
+    position: fixed;
+    z-index: 10;
+    top: 85px;
+
+@media (min-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    display: none;
   }
 `;

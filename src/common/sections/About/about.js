@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Photo, Informations, Text, InformationContainer, InformationWrapper, DataContainer } from '../About/styledAbout';
+import { Photo, Informations, Text, InformationContainer, InformationWrapper } from '../About/styledAbout';
 import prof from '../../Images/prof.png';
-import { Title, TitleContainer, Wrapper } from '../../storeElements';
+import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 import { useEffect } from 'react';
 export const About = () => {
 
@@ -28,7 +28,7 @@ export const About = () => {
       <TitleContainer>
         <Title leftTitle scrolled={scrolledNavbar}> About </Title>
       </TitleContainer>
-      <DataContainer>
+      <DataContainer about>
         <Photo src={prof} scrolled={scrolledNavbar} />
         <InformationWrapper scrolled={scrolledNavbar}>
           <InformationContainer>

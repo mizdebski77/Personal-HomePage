@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { ContactDataWrapper, ContactTitle, Form, Input, Message, SendButton, ContactLink, SVGIcon, EmailMe } from './styledContact';
+import { ContactDataWrapper, ContactTitle, Form, Input, Message, SendButton, ContactLink, SVGIcon, EmailMe, ContactContainer } from './styledContact';
 import phone from "../../Images/phone.svg"
 import mail from "../../Images/mail.svg"
 import website from "../../Images/website.svg"
@@ -71,12 +71,21 @@ export const Contact = () => {
                 </Form>
 
                 <ContactDataWrapper scrolledRight={scrolledNavbar}>
-                    <ContactTitle > <SVGIcon src={phone} />Phone</ContactTitle>
-                    <ContactTitle> <SVGIcon src={mail} />E-Mail</ContactTitle>
-                    <ContactTitle> <SVGIcon src={website} />Website</ContactTitle>
-                    <ContactLink href="tel:+501375604" >501375604</ContactLink>
-                    <ContactLink href="mailto: mizdebski123@gmail.com">mizdebski123@gmail.com</ContactLink>
-                    <ContactLink target='_blank' href="https://github.com/mizdebski77"> https://github.com/mizdebski77 </ContactLink>
+                    <ContactContainer>
+                        <ContactTitle > <SVGIcon src={phone} />Phone</ContactTitle>
+                        <ContactLink href="tel:+501375604" >501375604</ContactLink>
+                    </ContactContainer>
+
+                    <ContactContainer>
+                        <ContactTitle> <SVGIcon src={mail} />E-Mail</ContactTitle>
+                        <ContactLink href="mailto: mizdebski123@gmail.com">mizdebski123@gmail.com</ContactLink>
+                    </ContactContainer>
+
+                    <ContactContainer>
+                        <ContactTitle> <SVGIcon src={website} />Website</ContactTitle>
+                        <ContactLink target='_blank' href="https://github.com/mizdebski77"> https://github.com/mizdebski77 </ContactLink>
+                    </ContactContainer>
+
                 </ContactDataWrapper>
 
             </DataContainer>

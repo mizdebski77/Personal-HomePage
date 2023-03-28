@@ -41,7 +41,7 @@ export const Portfolio = () => {
                         scrolledLeft={scrolledNavbar && index % 2 === 0}>
                         <ProjectTitle> {repo.name}</ProjectTitle>
                         <LinkContainer>
-                            <LinkTitle> Repository </LinkTitle>
+                            <LinkTitle> Repository : </LinkTitle>
                             <ProjectLink href={repo.html_url} target="_blank">
                                 {repo.html_url}
                             </ProjectLink>

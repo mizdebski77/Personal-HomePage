@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
-import { Category, Color, InformationWrapper } from './styledEducation';
+import { Category, Color, InformationContainer, InformationWrapper } from './styledEducation';
 
 export const Education = () => {
 
@@ -28,12 +28,18 @@ export const Education = () => {
                 <Title BigTitle leftTitle scrolled={scrolledNavbar}> Education </Title>
             </TitleContainer>
             <DataContainer >
-                <Category scrolledLeft={scrolledNavbar}>University</Category>
-                <Category scrolledRight={scrolledNavbar}>Courses</Category>
-                <InformationWrapper scrolledLeft={scrolledNavbar} >Technical School of Energy and Electronics them. Tadeusz Kościuszko No. 9 in Krakow <Color>2015 - 2019</Color></InformationWrapper>
-                <InformationWrapper scrolledRight={scrolledNavbar}>ProfiLingua Language School<Color>2019 - 2023</Color> </InformationWrapper>
-                <InformationWrapper scrolledLeft={scrolledNavbar}>Silesian University of Technology. <Color>2019 - 2023</Color></InformationWrapper>
-                <InformationWrapper scrolledRight={scrolledNavbar}>IMPULS Center for Foreign Languages<Color>2019 - 2023</Color> </InformationWrapper>
+                <InformationContainer>
+                    <Category scrolledLeft={scrolledNavbar}>University  </Category>
+                    <InformationWrapper scrolledLeft={scrolledNavbar} >Technical School of Energy and Electronics them. Tadeusz Kościuszko No. 9 in Krakow <Color>2015 - 2019</Color></InformationWrapper>
+                    <InformationWrapper scrolledLeft={scrolledNavbar}>Silesian University of Technology. <Color>2019 - 2023</Color></InformationWrapper>
+                </InformationContainer>
+
+                <InformationContainer>
+                    <Category scrolledRight={scrolledNavbar}>Courses</Category>
+                    <InformationWrapper scrolledRight={scrolledNavbar}>ProfiLingua Language School<Color>2019 - 2023</Color> </InformationWrapper>
+                    <InformationWrapper scrolledRight={scrolledNavbar}>IMPULS Center for Foreign Languages<Color>2019 - 2023</Color> </InformationWrapper>
+                </InformationContainer>
+
             </DataContainer>
         </Wrapper>
     );

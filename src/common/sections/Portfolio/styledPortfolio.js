@@ -14,15 +14,30 @@ export const ProjectWrapper = styled.section`
     justify-content: center;
     transition: 0.5s;
     visibility: hidden;
+      
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    visibility: visible;
+  }
 
-      ${({ scrolledLeft }) => scrolledLeft && css`
-     visibility: visible;
-    animation: ${leftAnimation} 1.5s;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        min-height: 100px;
+    };
+
+    ${({ scrolledLeft }) => scrolledLeft && css`
+        visibility: visible;
+        animation: ${leftAnimation} 1.5s;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        animation:none;
+    };
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
      animation: ${rightAnimation} 1.5s;
     visibility: visible;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        animation:none;
+        visibility: visible;
+    };
   `}
 
     &:hover{
@@ -36,6 +51,10 @@ export const ProjectTitle = styled.h1`
     color: ${({ theme }) => theme.color.fontSecond};
     font-weight: normal;
     margin-bottom: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 20px;
+    };
 `;
 
 export const LinkContainer = styled.div`
@@ -44,6 +63,10 @@ export const LinkContainer = styled.div`
     grid-template-columns: auto 1fr;
     row-gap: 40px;
     column-gap: 20px;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    font-size: 16px;
+    column-gap: 10px;
+    };
 `;
 
 export const LinkTitle = styled.h3`
@@ -51,6 +74,9 @@ export const LinkTitle = styled.h3`
     font-weight: normal;
     font-size: 20px;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    font-size: 16px;
+    };
 `;
 
 export const ProjectLink = styled.a`
@@ -59,6 +85,10 @@ export const ProjectLink = styled.a`
     font-size: 16px;
     transition: 0.3s;
     font-style: italic;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    font-size: 14px;
+    };
 
     &:hover{
         color: ${({ theme }) => theme.color.fontSecond};

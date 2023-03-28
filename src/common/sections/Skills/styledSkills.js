@@ -9,14 +9,24 @@ export const Category = styled.div`
   border-radius: 10px;
   box-shadow: -6px 6px 5px ${({ theme }) => theme.color.white};
   visibility: hidden;
+    
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    visibility: visible;
+  }
 
   ${({ scrolledLeft }) => scrolledLeft && css`
   visibility: visible;
-  animation: ${leftAnimation} 1.5s;`} 
+  animation: ${leftAnimation} 1.5s;
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    animation: none;
+  }`} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
-  visibility: visible;`} 
+  visibility: visible;
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    animation: none;
+  }`} 
 `;
 
 
@@ -81,7 +91,6 @@ export const ListItem = styled.li`
 export const IconContainer = styled.div`
   width: 100px;
   display: grid;
-  justify-content: center;
 
   ${({ flags }) => flags && css`
     width: auto;
@@ -93,11 +102,18 @@ export const IconContainer = styled.div`
 
 export const ProgramIcon = styled.img`
   width: 100%;
+  text-align: center;
+  margin: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    width: 70%;
+  }
 `;
 
 export const PictureCaption = styled.figcaption`
   font-weight: bold;
   padding-top: 10px;
+  font-style: italic;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     font-size: 16px;
@@ -108,14 +124,25 @@ export const FlagIcon = styled.img`
   width: 130px;
   height: 80px;
   border-radius: 10px;
+  margin: auto;
   box-shadow: 0 0 16px ${({ theme }) => theme.color.fontMain};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    width: 100px;
+    height: 60px  ;
+  }
 `;
 
 export const Level = styled.h1`
   display: flex;
-  font-size: 35px;
+  font-size: 32px;
   color: ${({ theme }) => theme.color.black};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    font-size: 24px;
+    margin: auto;
+  }
 `;
 
 export const Color = styled.span`

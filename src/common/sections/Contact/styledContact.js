@@ -8,18 +8,33 @@ export const Form = styled.form`
     width: 90%;
     margin: auto;
     visibility: hidden;
+      
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    visibility: visible;
+  }
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        width: 100%;
+    };
     
     ${({ scrolledLeft }) => scrolledLeft && css`
     visibility: visible;
     animation: ${leftAnimation} 1.5s;
-  `} 
-`;
+      
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        animation: none;
+     }
+  `}`;
 
 export const EmailMe = styled.h1`
-    color: ${({theme}) => theme.color.fontSecond};
+    color: ${({ theme }) => theme.color.fontSecond};
     text-align: center;
     margin:0 0 20px 0;
     font-weight: normal;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 20px;
+    };
 `;
 
 export const Input = styled.input`
@@ -27,6 +42,9 @@ export const Input = styled.input`
     font-size: 20px;
     border-radius: 5px;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 16px;
+    };
     &:focus {
         outline: none;
     }
@@ -41,6 +59,9 @@ export const Message = styled.textarea`
     border-radius: 5px;
     resize: none;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 16px;
+    };
     &:focus {
         outline: none;
     }
@@ -48,19 +69,31 @@ export const Message = styled.textarea`
 
 export const ContactDataWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, auto);
     grid-auto-rows: min-content;
     gap: 20px;
+    margin: auto;
     align-items: center;
+    justify-content: start;
     visibility: hidden;
+      
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    visibility: visible;
+  }
+
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        display: grid;
+        grid-template-columns: 1fr;
+     }
 
     ${({ scrolledRight }) => scrolledRight && css`
     animation: ${rightAnimation} 1.5s;
     visibility: visible;
-  `}
 
-
-`;
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        animation: none;
+     }
+  `}`;
 
 export const SVGIcon = styled(SVG)`
     fill: ${({ theme }) => theme.color.secondColor};
@@ -72,8 +105,13 @@ export const ContactTitle = styled.h1`
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-weight: normal;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 16px;
+        justify-content: center;
+
+    };
 
 `;
 
@@ -84,9 +122,13 @@ export const SendButton = styled.button`
     border-radius: 5px;
     font-size: 20px;
     border: none;
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     cursor: pointer;
     transition: 0.5s;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 16px;
+    };
 
     &:hover {
         transform: scale(1.03);
@@ -94,7 +136,7 @@ export const SendButton = styled.button`
 
     &:active {
         background: ${({ theme }) => theme.color.mainColor};
-        border: 1px solid ${({theme}) => theme.color.secondColor};
+        border: 1px solid ${({ theme }) => theme.color.secondColor};
     }
 `;
 
@@ -102,11 +144,34 @@ export const ContactLink = styled.a`
     color: ${({ theme }) => theme.color.white};
     text-decoration: none;
     font-size: 16px;
-    text-align: center;
+    display: flex;
     font-style: italic;
     transition: 0.3s;
 
     &:hover {
-        color: ${({theme}) => theme.color.fontSecond};
+        color: ${({ theme }) => theme.color.fontSecond};
     }
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 14px;
+        justify-content: center;
+
+    };
+`;
+
+export const ContactContainer = styled.div`
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+
+    border-bottom: 1px solid ${({theme}) => theme.color.fontSecond};
+    padding: 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        font-size: 16px;
+        grid-template-columns: 1fr;        
+    };
 `;

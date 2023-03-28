@@ -9,7 +9,7 @@ import AE from '../../Images/ae.png'
 import PL from '../../Images/Flags/pl.png'
 import ENG from '../../Images/Flags/gb.png'
 import GER from '../../Images/Flags/de.png'
-import { DataContainer, Heszke, Title, TitleContainer, Wrapper } from '../../storeElements';
+import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 
 
 

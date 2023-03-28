@@ -12,9 +12,7 @@ export const Category = styled.h1`
   text-align: center;
   padding: 20px;
   border: 2px solid ${({ theme }) => theme.color.fontSecond};
-  width: 80%;
-  margin: 0 auto;
-  visibility: hidden;
+  width: 90%;  visibility: hidden;
     
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     visibility: visible;
@@ -56,15 +54,14 @@ export const InformationContainer = styled.div`
 
 export const InformationWrapper = styled.div`
   display: grid;
-  width: 100%;
+  width: 90%;
   font-size: 24px;
   color:${({ theme }) => theme.color.white};
   padding: 20px 0 20px 0;
-  margin: 0 auto;
   border-bottom: 1px solid ${({ theme }) => theme.color.white};
   font-style: italic;
   visibility: hidden;
-  height: 150px;
+  min-height: 150px;
     
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     visibility: visible;
@@ -98,6 +95,7 @@ export const InformationWrapper = styled.div`
 export const Color = styled.span`
   color:${({ theme }) => theme.color.fontSecond};
   display: block;
+  font-style: italic;
 `;
 
 

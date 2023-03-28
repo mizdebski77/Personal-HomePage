@@ -1,9 +1,10 @@
 import React from 'react';
-import { Span, Text, BigText, TextBox, Wrapper, SocialsContainer, SocialImage, SocialLink,} from './styledHome';
+import { Span, Text, BigText, TextBox, Wrapper,} from './styledHome';
 import gh from '../../Images/gh.svg'
 import lin from '../../Images/lin.svg'
 import gma from '../../Images/gma.svg'
 import mess from '../../Images/mess.svg'
+import { SocialImage, SocialLink, SocialsContainer } from '../../storeElements';
 
 
 export const Home = () => {

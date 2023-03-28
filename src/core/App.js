@@ -1,3 +1,4 @@
+import { Footer } from "../common/Footer/footer";
 import { Navbar } from "../common/Navbar/navbar";
 import { About } from "../common/sections/About/about";
 import { Contact } from "../common/sections/Contact/contact";
@@ -17,6 +18,7 @@ function App() {
       <Education />
       <Portfolio />
       <Contact />
+      <Footer />
     </>
 
 

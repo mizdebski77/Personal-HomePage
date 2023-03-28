@@ -21,6 +21,10 @@ export const Logo = styled.div`
     color: ${({ theme }) => theme.color.fontSecond};
     font-weight: bold;
     font-size: 30px;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+      font-size: 24px;
+    }
 `;
 
 export const LinksContainer = styled.div`

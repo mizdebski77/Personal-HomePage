@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { titleLeftAnimation, titleRightAnimation } from "./animationsStore";
+import SVG from "react-inlinesvg";
 
 export const Wrapper = styled.section`
   min-height: 100vh;
@@ -122,4 +123,41 @@ export const DataContainer = styled.div`
   `};
 
 `;
+
+export const SocialsContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ${({ footer }) => footer && css`
+      justify-content: space-between;
+      margin-right: 40px;
+      gap: 40px;
+
+      @media (max-width: ${({theme}) => theme.breakPoint.mobileMax}px) {
+        margin: 0;
+    }
+  `};
+
+`;
+
+export const SocialImage = styled(SVG)`
+    height: 40px;
+    width: 40px;
+    fill: ${({ theme }) => theme.color.white};
+    transition: 0.7s;
+
+    &:hover {
+        fill: ${({ theme }) => theme.color.secondColor};
+    }
+`;
+
+export const SocialLink = styled.a`
+    transition: 0.3s;
+
+    &:hover{
+        transform: scale(1.2);
+    }
+`;
+
 

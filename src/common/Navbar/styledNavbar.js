@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
+import { inNavbar, outNavbar } from "../animationsStore";
 
 export const Wrapper = styled.nav`
     background: ${({ theme }) => theme.color.navbar};
@@ -27,6 +28,10 @@ export const LinksContainer = styled.div`
     grid-template-columns: repeat(5, auto);
     gap: 50px;
     align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+        display: none;
+    }
 `;
 
 const activeClassName = "active";
@@ -37,9 +42,7 @@ export const Links = styled(Link)`
     text-transform: uppercase;
     cursor: pointer;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-        display: none;
-    }
+
 
     &.${activeClassName} {
     color: ${({ theme }) => theme.color.fontSecond};
@@ -48,15 +51,25 @@ export const Links = styled(Link)`
 `;
 
 export const PhoneNavbarContainer = styled.div`
-    background: ${({ theme }) => theme.color.white};
-    width: 100%;
-    min-height: 100px;
-    padding: 20px;
-    position: fixed;
-    z-index: 10;
-    top: 85px;
+  background: ${({ theme }) => theme.color.navbar};
+  position: fixed;
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  z-index: 980;
+  grid-gap: 20px;
+  opacity: 10%;
+  animation: ${({ phoneNavbar }) => (phoneNavbar ? inNavbar : outNavbar)} 0.5s ease-in-out forwards;
 
 @media (min-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    display: none;
+  }
+`;
+
+export const PhoneNavbar = styled.div`
+  cursor: pointer;
+
+  @media (min-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     display: none;
   }
 `;

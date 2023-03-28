@@ -28,7 +28,7 @@ export const About = () => {
       <TitleContainer>
         <Title leftTitle scrolled={scrolledNavbar}> About </Title>
       </TitleContainer>
-      <DataContainer about>
+      <DataContainer ab>
         <Photo src={prof} scrolled={scrolledNavbar} />
         <InformationWrapper scrolled={scrolledNavbar}>
           <InformationContainer>

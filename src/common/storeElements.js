@@ -103,7 +103,7 @@ export const DataContainer = styled.div`
     grid-template-columns: 1fr;
   }
   
-  ${({ about }) => about && css`
+  ${({ ab }) => ab && css`
     grid-template-columns: auto 1fr;
   `};
 

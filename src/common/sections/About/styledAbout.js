@@ -13,12 +13,20 @@ const inAnimation = keyframes`
 `;
 
 export const DataContainer = styled.div`
-    display: flex;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  @media (max-width: ${({theme}) => theme.breakPoint.firstBreakPoint}px){
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+
+  }
 `;
 
 export const Photo = styled.img`
-    width: 350px;
+    max-width: 360px;
+    width: 100%;
+    height: 100%;
     border: 6px solid ${({ theme }) => theme.color.white};
     box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
     visibility: hidden;

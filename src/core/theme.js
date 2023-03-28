@@ -1,6 +1,6 @@
 export const theme = {
     color: {
-        white:"#ffffff",
+        white: "#ffffff",
         mainColor: "#1D1C1B",
         secondColor: "#D9B815",
         fontMain: "#1D1C1B",
@@ -10,6 +10,8 @@ export const theme = {
 
     },
     breakPoint: {
-        mobileMax:900,
+        firstBreakPoint: 1280,
+        mobileMax: 900,
+        smallPhone: 750,
     }
 }

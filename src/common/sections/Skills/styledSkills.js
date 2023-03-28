@@ -12,14 +12,13 @@ export const Category = styled.div`
 
   ${({ scrolledLeft }) => scrolledLeft && css`
   visibility: visible;
-  animation: ${leftAnimation} 1.5s;
-  `} 
+  animation: ${leftAnimation} 1.5s;`} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
-  visibility: visible;
-  `} 
+  visibility: visible;`} 
 `;
+
 
 export const CategoryTitle = styled.h1`
   color: ${({ theme }) => theme.color.white};
@@ -28,13 +27,17 @@ export const CategoryTitle = styled.h1`
   margin: 0;
   text-transform: uppercase;
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+   font-size:24px;
+  };
 `;
 
 export const List = styled.ul`
   color: ${({ theme }) => theme.color.fontMain};
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
+  padding: 0px;
 
   ${({ icons }) => icons && css`
   display: flex;
@@ -44,14 +47,21 @@ export const List = styled.ul`
   gap:20px  100px;
   padding: 0;
   justify-content: center;
-  `}
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+    gap:20px  50px;
+  }`};
 
   ${({ flags }) => flags && css`
     display: flex;
     margin: 45px 20px 10px 20px;
     justify-content: space-between;
     padding: 0;
-  `};
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      flex-direction: column;
+      margin: 0;
+  }`};
 `;
 
 export const ListItem = styled.li`
@@ -59,22 +69,26 @@ export const ListItem = styled.li`
   display: flex;
   font-weight: bold;
   font-size: 17px;
+
   &::before {
     content: "•";
-    margin-right: 0.5em;
-  }
+    margin-right: 0.5em;}
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+    font-size: 14px;}
  `;
 
 export const IconContainer = styled.div`
-    width: 100px;
-    display: grid;
-    justify-content: center;
+  width: 100px;
+  display: grid;
+  justify-content: center;
 
-    ${({ flags }) => flags && css`
+  ${({ flags }) => flags && css`
     width: auto;
     margin-top: 45px;
-    `};
 
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+    margin-top: 20px;}`};
  `;
 
 export const ProgramIcon = styled.img`
@@ -84,7 +98,10 @@ export const ProgramIcon = styled.img`
 export const PictureCaption = styled.figcaption`
   font-weight: bold;
   padding-top: 10px;
-  
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    font-size: 16px;
+  }
 `;
 
 export const FlagIcon = styled.img`
@@ -103,6 +120,5 @@ export const Level = styled.h1`
 
 export const Color = styled.span`
   color: ${({ theme }) => theme.color.white};
-
 `;
 

@@ -19,7 +19,7 @@ export const Photo = styled.img`
   box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
   visibility: hidden;
     
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
 
@@ -31,7 +31,7 @@ export const Photo = styled.img`
     visibility: visible;
     animation: ${inAnimation} 1s;`}
     
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation:none;
   }
 `;
@@ -41,7 +41,7 @@ export const InformationWrapper = styled.div`
   display: grid;
   visibility: hidden;
  
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
   
@@ -53,7 +53,7 @@ export const InformationWrapper = styled.div`
     visibility: visible;
     animation: ${inAnimation} 1s;`}
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation:none;
   }
 `;

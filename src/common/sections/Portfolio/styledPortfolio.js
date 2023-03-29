@@ -15,7 +15,7 @@ export const ProjectWrapper = styled.section`
     transition: 0.5s;
     visibility: hidden;
       
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
 
@@ -26,7 +26,7 @@ export const ProjectWrapper = styled.section`
     ${({ scrolledLeft }) => scrolledLeft && css`
         visibility: visible;
         animation: ${leftAnimation} 1.5s;
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation:none;
     };
   `} 
@@ -34,9 +34,8 @@ export const ProjectWrapper = styled.section`
   ${({ scrolledRight }) => scrolledRight && css`
      animation: ${rightAnimation} 1.5s;
     visibility: visible;
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation:none;
-        visibility: visible;
     };
   `}
 

@@ -11,6 +11,9 @@ export const Wrapper = styled.section`
   
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     padding: 30px;
+    grid-auto-rows: min-content;
+    min-height: 50vh;
+
   }
 
   ${({ leftWrapper }) => leftWrapper && css`
@@ -51,6 +54,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   border-bottom: 2px solid ${({ theme }) => theme.color.white};
   display: none;
+  word-break: normal;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     font-size: 80px;
@@ -69,7 +73,6 @@ export const Title = styled.h1`
   ${({ BigTitle }) => BigTitle && css`
       letter-spacing: 1.6rem;
       font-size: 110px;
-      word-break: normal;
 
     `}
 

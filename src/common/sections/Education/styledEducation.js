@@ -11,10 +11,11 @@ export const Category = styled.h1`
   font-size: 56px;
   text-align: center;
   padding: 20px;
+  margin: 0;
   border: 2px solid ${({ theme }) => theme.color.fontSecond};
   width: 90%;  visibility: hidden;
     
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
   
@@ -28,7 +29,7 @@ export const Category = styled.h1`
   visibility: visible;
   animation: ${leftAnimation} 1.5s;
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
       animation: none;
   `}
    
@@ -37,9 +38,9 @@ export const Category = styled.h1`
   animation: ${rightAnimation} 1.5s;
   visibility: visible;
   
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
       animation: none;
-      visibility: visible;}
+ }
   `}
 `;
 
@@ -64,11 +65,9 @@ export const InformationWrapper = styled.div`
   min-height: 150px;
   grid-auto-rows: min-content;
     
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
-    padding: 20px 0 20px 0;
     min-height: 50px;
-
   }
   
   
@@ -80,7 +79,7 @@ export const InformationWrapper = styled.div`
   visibility: visible;
   animation: ${leftAnimation} 1.5s;
   
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
       animation: none;
      }
   `} 
@@ -89,9 +88,8 @@ export const InformationWrapper = styled.div`
   animation: ${rightAnimation} 1.5s;
   visibility: visible;
   
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
       animation: none;
-      visibility: visible;
      }
   `} 
 `;

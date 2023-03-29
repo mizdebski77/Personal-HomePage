@@ -17,14 +17,14 @@ export const Category = styled.div`
   ${({ scrolledLeft }) => scrolledLeft && css`
   visibility: visible;
   animation: ${leftAnimation} 1.5s;
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation: none;
   }`} 
 
   ${({ scrolledRight }) => scrolledRight && css`
   animation: ${rightAnimation} 1.5s;
   visibility: visible;
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation: none;
   }`} 
 `;

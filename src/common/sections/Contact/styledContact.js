@@ -9,7 +9,7 @@ export const Form = styled.form`
     margin: auto;
     visibility: hidden;
       
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
 
@@ -21,9 +21,9 @@ export const Form = styled.form`
     visibility: visible;
     animation: ${leftAnimation} 1.5s;
       
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        animation: none;
-     }
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+    animation:none;
+  }
   `}`;
 
 export const EmailMe = styled.h1`
@@ -34,6 +34,7 @@ export const EmailMe = styled.h1`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         font-size: 20px;
+        margin: 0;
     };
 `;
 
@@ -76,7 +77,7 @@ export const ContactDataWrapper = styled.div`
     justify-content: start;
     visibility: hidden;
       
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
   }
 
@@ -90,7 +91,7 @@ export const ContactDataWrapper = styled.div`
     animation: ${rightAnimation} 1.5s;
     visibility: visible;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation: none;
      }
   `}`;

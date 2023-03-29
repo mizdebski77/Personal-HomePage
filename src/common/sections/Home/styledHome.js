@@ -25,11 +25,11 @@ export const TextBox = styled.div`
     align-items: center;
     gap: 20px;
     padding: 50px 20px 50px 20px;
+
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         text-align: center;
+        padding: 25px 10px 25px 10px;
     }
-
-
 `;
 
 export const BigText = styled.h1`
@@ -39,7 +39,7 @@ export const BigText = styled.h1`
     margin: 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        font-size: 40px;
+        font-size: 32px;
     }
 `;
 
@@ -48,8 +48,7 @@ export const Text = styled.h1`
     font-weight: normal;
     margin: 0;
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        font-size: 24px;
-    }
+        font-size: 20px;}
 `;
 
 export const Span = styled.span`

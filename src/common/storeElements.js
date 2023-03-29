@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
   align-items: center;
   
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-    padding: 30px;
+    padding: 20px;
     grid-auto-rows: min-content;
     min-height: 50vh;
 
@@ -160,6 +160,11 @@ export const SocialImage = styled(SVG)`
 
     &:hover {
         fill: ${({ theme }) => theme.color.secondColor};
+    }
+
+    @media (max-width: ${({theme}) => theme.breakPoint.mobileMax}px){
+      height: 30px;
+      width: 30px;
     }
 `;
 

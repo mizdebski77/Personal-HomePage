@@ -20,7 +20,8 @@ export const Category = styled.h1`
   }
   
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     padding: 0px;
     font-size: 24px;
   }
@@ -50,6 +51,7 @@ export const InformationContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     gap:10px
+    
   }
 `;
 
@@ -72,7 +74,9 @@ export const InformationWrapper = styled.div`
   
   
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-      font-size:16px;}
+      font-size:16px;
+      margin: 0 auto;
+    }
   
 
   ${({ scrolledLeft }) => scrolledLeft && css`

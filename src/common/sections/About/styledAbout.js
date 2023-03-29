@@ -79,7 +79,7 @@ export const Informations = styled.h1`
   color: ${({ theme }) => theme.color.secondColor};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    font-size: 24px;
+    font-size: 20px;
   }
 
   ${({ white }) => white && css`

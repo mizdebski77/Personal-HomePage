@@ -17,6 +17,9 @@ export const ProjectWrapper = styled.section`
       
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
+
+    padding: 10px;
+
   }
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){

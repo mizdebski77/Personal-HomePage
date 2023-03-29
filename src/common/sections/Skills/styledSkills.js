@@ -12,6 +12,9 @@ export const Category = styled.div`
     
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     visibility: visible;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
   }
 
   ${({ scrolledLeft }) => scrolledLeft && css`
@@ -59,7 +62,8 @@ export const List = styled.ul`
   justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-    gap:20px  50px;
+    gap:10px  25px;
+    margin: 20px 0 0 0 ;
   }`};
 
   ${({ flags }) => flags && css`
@@ -103,10 +107,10 @@ export const IconContainer = styled.div`
 export const ProgramIcon = styled.img`
   width: 100%;
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    width: 70%;
+    width: 50%;
   }
 `;
 
@@ -116,7 +120,7 @@ export const PictureCaption = styled.figcaption`
   font-style: italic;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -128,8 +132,8 @@ export const FlagIcon = styled.img`
   box-shadow: 0 0 16px ${({ theme }) => theme.color.fontMain};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    width: 100px;
-    height: 60px  ;
+    width: 80px;
+    height: 50px  ;
   }
 `;
 

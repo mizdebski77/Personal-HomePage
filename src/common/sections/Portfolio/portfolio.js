@@ -13,7 +13,7 @@ export const Portfolio = () => {
 
     }, [dispatch])
 
-
+    console.log(Repositories)
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
@@ -42,6 +42,13 @@ export const Portfolio = () => {
                         <LinkContainer>
                             <LinkTitle> Repository : </LinkTitle>
                             <ProjectLink href={repo.html_url} target="_blank">
+                                {repo.html_url}
+                            </ProjectLink>
+                        </LinkContainer>
+
+                        <LinkContainer>
+                            <LinkTitle> Website : </LinkTitle>
+                            <ProjectLink href={repo.homepage} target="_blank">
                                 {repo.html_url}
                             </ProjectLink>
                         </LinkContainer>

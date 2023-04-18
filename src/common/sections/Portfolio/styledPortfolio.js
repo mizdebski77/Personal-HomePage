@@ -65,6 +65,7 @@ export const LinkContainer = styled.div`
     grid-template-columns: auto 1fr;
     row-gap: 40px;
     column-gap: 20px;
+    margin-bottom: 20px;
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     font-size: 16px;
     column-gap: 10px;
@@ -75,6 +76,7 @@ export const LinkTitle = styled.h3`
     margin: 0 ;
     font-weight: normal;
     font-size: 20px;
+    min-width: 115px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     font-size: 16px;

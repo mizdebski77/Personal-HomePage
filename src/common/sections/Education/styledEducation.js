@@ -58,6 +58,7 @@ export const InformationContainer = styled.div`
 export const InformationWrapper = styled.div`
   display: grid;
   width: 90%;
+  gap: 12px;
   font-size: 24px;
   color:${({ theme }) => theme.color.white};
   padding: 20px 0 20px 0;

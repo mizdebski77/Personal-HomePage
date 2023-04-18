@@ -52,7 +52,7 @@ export const ProjectTitle = styled.h1`
     font-size: 28px;
     color: ${({ theme }) => theme.color.fontSecond};
     font-weight: normal;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 20px;

@@ -10,6 +10,7 @@ export const Portfolio = () => {
 
     useEffect(() => {
         dispatch(fetchRepos());
+
     }, [dispatch])
 
 

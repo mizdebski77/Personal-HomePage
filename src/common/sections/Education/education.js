@@ -36,8 +36,8 @@ export const Education = () => {
 
                 <InformationContainer>
                     <Category scrolledRight={scrolledNavbar}>Courses</Category>
-                    <InformationWrapper scrolledRight={scrolledNavbar}>ProfiLingua Language School<Color>2019 - 2023</Color> </InformationWrapper>
-                    <InformationWrapper scrolledRight={scrolledNavbar}>IMPULS Center for Foreign Languages<Color>2019 - 2023</Color> </InformationWrapper>
+                    <InformationWrapper scrolledRight={scrolledNavbar}>ProfiLingua Language School (German language course)<Color>2018 - 2019</Color>  </InformationWrapper>
+                    <InformationWrapper scrolledRight={scrolledNavbar}>IMPULS Center for Foreign Languages (English course)<Color>2012- 2015</Color></InformationWrapper>
                 </InformationContainer>
 
             </DataContainer>

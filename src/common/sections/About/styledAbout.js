@@ -12,9 +12,7 @@ const inAnimation = keyframes`
 `;
 
 export const Photo = styled.img`
-  max-width: 360px;
-  width: 100%;
-  height: 100%;
+  max-width: 400px;
   border: 6px solid ${({ theme }) => theme.color.white};
   box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
   visibility: hidden;

@@ -13,7 +13,6 @@ export const Wrapper = styled.section`
     padding: 20px;
     grid-auto-rows: min-content;
     min-height: 50vh;
-
   }
 
   ${({ leftWrapper }) => leftWrapper && css`

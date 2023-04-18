@@ -1,26 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const githubSlice = createSlice({
-    name: "github",
-    initialState: {
-        status: "loading",
-        repos: [],
+export const githubSlice = createSlice({
+  name: "github",
+  initialState: {
+    status: "loading",
+    repos: [],
+  },
+
+  reducers: {
+    fetchRepos: (state) => {
+      state.status = "loading";
     },
 
-    reducers: {
-        fetchRepos: (state) => {
-            state.status = "loading";
-        },
+    fetchReposSuccess: (state, action) => {
+      state.status = "success";
+      state.repos = action.payload;
+    },
 
-        fetchReposSuccess: (state, { payload: repos }) => {
-            state.status = "success";
-            state.repos = repos;
-        },
-
-        fetchReposError: (state) => {
-            state.status = "error";
-        },
-    }
+    fetchReposError: (state) => {
+      state.status = "error";
+    },
+  },
 });
 
 export const { fetchRepos, fetchReposError, fetchReposSuccess } = githubSlice.actions;

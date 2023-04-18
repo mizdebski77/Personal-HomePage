@@ -1,4 +1,4 @@
-import { call, put, takeLatest} from "redux-saga/effects";
+import { call, put, takeLatest, delay} from "redux-saga/effects";
 import { getRepos } from "./getApi";
 import { fetchRepos, fetchReposError, fetchReposSuccess } from "./githubSlice";
 
@@ -9,7 +9,6 @@ function* fetchRepositoriesHandler() {
 
     } catch (error) {
         yield put(fetchReposError(error));
-        yield call(console.error);
     }
 }
 

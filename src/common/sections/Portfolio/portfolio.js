@@ -8,10 +8,10 @@ export const Portfolio = () => {
     const Repositories = useSelector(selectRepositories);
     const dispatch = useDispatch();
 
-
     useEffect(() => {
         dispatch(fetchRepos());
     }, [dispatch])
+
 
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
@@ -25,9 +25,7 @@ export const Portfolio = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", isWindowScroll);
-
         return () => window.removeEventListener("scroll", isWindowScroll)
-
     }, []);
 
 

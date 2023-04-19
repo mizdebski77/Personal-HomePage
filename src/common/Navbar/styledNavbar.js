@@ -24,7 +24,7 @@ export const Logo = styled(Link)`
     cursor: pointer;
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-      font-size: 24px;
+      font-size: 20px;
     }
 `;
 

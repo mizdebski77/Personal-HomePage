@@ -10,7 +10,6 @@ export const Navbar = () => {
         setPhoneNavbar(!phoneNavbar)
     };
 
-    console.log(phoneNavbar);
     return (
         <>
             <Wrapper>

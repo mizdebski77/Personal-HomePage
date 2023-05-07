@@ -13,8 +13,6 @@ export const Portfolio = () => {
 
     }, [dispatch])
 
-    console.log(Repositories)
-
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
         if (window.scrollY > 3200) {

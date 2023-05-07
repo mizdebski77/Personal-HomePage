@@ -21,7 +21,10 @@ export const Wrapper = styled.footer`
 export const FooterCopyrights = styled.div`
     color:${({theme}) => theme.color.fontSecond};
     margin-left: 40px;
+    font-size: 24px;
+
     @media (max-width: ${({theme}) => theme.breakPoint.mobileMax}px) {
         margin: 0;
+        font-size: 16px;
     }
 `;

@@ -12,19 +12,24 @@ const inAnimation = keyframes`
 `;
 
 export const Photo = styled.img`
-  max-width: 400px;
+  width: 400px;
   border: 6px solid ${({ theme }) => theme.color.white};
   box-shadow: -8px 8px 0 ${({ theme }) => theme.color.secondColor};
   visibility: hidden;
     
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
+    margin: 0 auto;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    margin: 0 auto;
-    width: 80%;
+    width: 280px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.smallPhone}px){
+    width: 240px;
+  }
+
   ${({ scrolled }) => scrolled && css`
     visibility: visible;
     animation: ${inAnimation} 1s;`}
@@ -34,6 +39,7 @@ export const Photo = styled.img`
   }
 `;
 
+
 export const InformationWrapper = styled.div`
   max-width: 480px;
   display: grid;
@@ -41,6 +47,7 @@ export const InformationWrapper = styled.div`
  
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
+    margin: 0 auto;
   }
   
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
@@ -97,11 +104,14 @@ export const Informations = styled.h1`
 export const Text = styled.h3`
     color: ${({ theme }) => theme.color.white};
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     font-style: italic;
     
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    text-align: center;}    
+    text-align: center;
+    font-size: 14px;
+
+    }    
 `;
 
 

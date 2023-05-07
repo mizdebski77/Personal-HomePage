@@ -105,12 +105,12 @@ export const IconContainer = styled.div`
  `;
 
 export const ProgramIcon = styled.img`
-  width: 100%;
+  width: 100px;
   text-align: center;
   margin: 0 auto;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-    width: 50%;
+    width: 50px;
   }
 `;
 

@@ -112,7 +112,7 @@ export const DataContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-
+  
     ${({ notSuccess }) =>
     notSuccess &&
     css`

@@ -51,7 +51,6 @@ export const InformationContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
     gap:10px
-    
   }
 `;
 

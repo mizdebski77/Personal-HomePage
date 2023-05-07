@@ -22,7 +22,7 @@ export const Navbar = () => {
                         duration={1500}>
                     Marcin Izdebski</Logo>
                     <PhoneNavbar onClick={openMenu}>
-                        {phoneNavbar ? <AiOutlineClose size={35} color={'rgb(217, 184, 21)'} /> : <AiOutlineMenu size={35} color={'rgb(217, 184, 21)'} />}
+                        {phoneNavbar ? <AiOutlineClose size={28} color={'rgb(217, 184, 21)'} /> : <AiOutlineMenu size={28} color={'rgb(217, 184, 21)'} />}
                     </PhoneNavbar>
                     <LinksContainer>
                         <Links

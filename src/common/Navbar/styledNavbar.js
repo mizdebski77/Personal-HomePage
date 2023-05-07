@@ -19,8 +19,7 @@ export const NavbarContent = styled.section`
 
 export const Logo = styled(Link)`
     color: ${({ theme }) => theme.color.fontSecond};
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
@@ -43,11 +42,8 @@ const activeClassName = "active";
 
 export const Links = styled(Link)`
     color: ${({ theme }) => theme.color.white};
-    text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-
-
 
     &.${activeClassName} {
     color: ${({ theme }) => theme.color.fontSecond};
@@ -59,10 +55,10 @@ export const PhoneNavbarContainer = styled.div`
   background: ${({ theme }) => theme.color.navbar};
   position: fixed;
   padding: 20px;
+  z-index: 10;
   width: 100%;
   display: grid;
-  z-index: 980;
-  grid-gap: 20px;
+  gap: 20px;
   opacity: 10%;
   animation: ${({ phoneNavbar }) => (phoneNavbar ? inNavbar : outNavbar)} 0.5s ease-in-out forwards;
 

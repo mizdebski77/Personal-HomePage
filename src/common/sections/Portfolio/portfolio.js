@@ -15,9 +15,9 @@ export const Portfolio = () => {
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
-        if (window.scrollY > 3200) {
+        if (window.scrollY > 3800) {
             setScrolledNavbar(true);
-        } else {
+        } else if (window.scrollY < 3400) {
             setScrolledNavbar(false)
         };
     };

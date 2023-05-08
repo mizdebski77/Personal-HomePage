@@ -9,12 +9,13 @@ export const About = () => {
 
 
   const isWindowScroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 500) {
       setScrolledNavbar(true);
-    } else {
-      setScrolledNavbar(false);
+    } else if (window.scrollY < 100) {
+      setScrolledNavbar(false)
     }
   };
+
 
   useEffect(() => {
     window.addEventListener("scroll", isWindowScroll);

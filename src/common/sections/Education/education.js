@@ -8,12 +8,13 @@ export const Education = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 2200) {
+        if (window.scrollY > 2500) {
             setScrolledNavbar(true);
-        } else {
+        } else if (window.scrollY < 2200) {
             setScrolledNavbar(false);
         };
     };
+
 
     useEffect(() => {
         window.addEventListener("scroll", isWindowScroll);

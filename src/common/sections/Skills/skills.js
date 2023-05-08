@@ -18,9 +18,9 @@ export const Skills = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 1200) {
+        if (window.scrollY > 1600) {
             setScrolledNavbar(true);
-        } else {
+        } else if (window.scrollY < 1200) {
             setScrolledNavbar(false)
         };
     };
@@ -30,24 +30,25 @@ export const Skills = () => {
     const skillset = [
         {
             skills: [
-                "JavaScript ES6+",
-                "React",
-                "Redux-Saga",
-                "Redux (Toolkit)",
-                "React Hooks",
-                "React Router",
                 "Semantic & accessible HTML",
-                "Responsive Web Design",
                 "CSS BEM convention",
                 "CSS Grid",
                 "CSS Flexbox",
+                "JavaScript ES6+",
+                "Immutability",
+                "Git",
+                "React",
+                "React Hooks",
+                "React Router",
+                "Redux-Saga",
+                "Redux (Toolkit)",
+                "Responsive Web Design",
                 "Working with API (fetch, axios)",
                 "Markdown",
                 "Error handling",
                 "Promises, Async/Await",
                 "Scrum",
                 "NPM",
-                "Git",
             ],
         },
 

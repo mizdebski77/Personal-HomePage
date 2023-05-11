@@ -1,25 +1,23 @@
 import styled, { css } from "styled-components";
 import { leftAnimation, rightAnimation } from "../../animationsStore";
+import Slider from "react-slick";
 
 export const ProjectWrapper = styled.section`
     background: transparent;
     border: 2px solid ${({ theme }) => theme.color.secondColor};
     color: white;
     padding: 20px;
+    height: 1000px; 
     border-radius: 5px;
     color: ${({ theme }) => theme.color.fontSecond};
-    width: 100%;
-    min-height: 200px;
     display: grid;
     justify-content: center;
     transition: 0.5s;
-    visibility: hidden;
+    visibility: visible;
       
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     visibility: visible;
-
     padding: 10px;
-
   }
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
@@ -28,14 +26,14 @@ export const ProjectWrapper = styled.section`
 
     ${({ scrolledLeft }) => scrolledLeft && css`
         visibility: visible;
-        animation: ${leftAnimation} 1.5s;
+        /* animation: ${leftAnimation} 1.5s; */
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation:none;
     };
   `} 
 
   ${({ scrolledRight }) => scrolledRight && css`
-     animation: ${rightAnimation} 1.5s;
+     /* animation: ${rightAnimation} 1.5s; */
     visibility: visible;
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation:none;
@@ -57,6 +55,21 @@ export const ProjectTitle = styled.h1`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 20px;
     };
+`;
+
+export const CustomSlider = styled(Slider)`
+      width: 800px;
+      min-height: 1000px;
+      border: 10px solid white;
+      margin: 10px;
+      .slick-dots {
+    li {
+      button:before {
+        color: ${({ theme }) => theme.color.secondColor};
+        font-size: 16px;
+      }
+    }
+  }
 `;
 
 export const LinkContainer = styled.div`

@@ -129,10 +129,12 @@ export const DataContainer = styled.div`
 
 
   ${({ gh }) => gh && css`
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: none;
+      justify-content: center;
   `};
-
 `;
+
+
 
 export const SocialsContainer = styled.div`
     display: flex;

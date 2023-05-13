@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 import { fetchRepos, selectRepositories } from './githubSlice';
-import { CustomSlider, Description, DescriptionTitle, LinkContainer, LinkTitle, ProjectLink, ProjectTitle, ProjectWrapper, SliderDiv } from './styledPortfolio';
+import { CustomSlider, Description, DescriptionTitle, LinkContainer, LinkTitle, ProjectLink, ProjectTitle, ProjectWrapper } from './styledPortfolio';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import xd from '../../Images/prof.png'
 
 export const Portfolio = () => {
     const Repositories = useSelector(selectRepositories);
@@ -39,23 +38,21 @@ export const Portfolio = () => {
 
         responsive: [
             {
-              breakpoint: 1380,
-              settings: {
-                slidesToShow: 1,
-              },
+                breakpoint: 1380,
+                settings: {
+                    slidesToShow: 1,
+                },
             },
-          ],
+        ],
     };
 
     return (
         <Wrapper RightWrapper id="portfolio" >
             <DataContainer gh>
-                <CustomSlider {...settings}>
-                    {Repositories.map((repo, index) => (
+                <CustomSlider scrolledLeft={scrolledNavbar} {...settings}>
+                    {Repositories.map((repo) => (
                         <ProjectWrapper
-                            key={repo.id}
-                            scrolledRight={scrolledNavbar && index % 2 !== 0}
-                            scrolledLeft={scrolledNavbar && index % 2 === 0}>
+                            key={repo.id}>
                             <ProjectTitle> {repo.name}</ProjectTitle>
                             <LinkContainer>
                                 <LinkTitle> Repository : </LinkTitle>

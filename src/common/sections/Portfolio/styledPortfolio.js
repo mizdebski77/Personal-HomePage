@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { leftAnimation, rightAnimation } from "../../animationsStore";
+import { leftAnimation } from "../../animationsStore";
 import Slider from "react-slick";
 
 export const ProjectWrapper = styled.section`
@@ -11,30 +11,6 @@ export const ProjectWrapper = styled.section`
     border-radius: 5px;
     color: ${({ theme }) => theme.color.fontSecond};
     transition: 0.5s;
-    visibility: visible;
-
-      
-  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-    visibility: visible;
-    padding: 10px;
-  }
-
-
-    ${({ scrolledLeft }) => scrolledLeft && css`
-        visibility: visible;
-        /* animation: ${leftAnimation} 1.5s; */
-    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-        animation:none;
-    };
-  `} 
-
-  ${({ scrolledRight }) => scrolledRight && css`
-     /* animation: ${rightAnimation} 1.5s; */
-    visibility: visible;
-    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-        animation:none;
-    };
-  `}
 
     &:hover{
         box-shadow: 0 0 7px ${({ theme }) => theme.color.white};
@@ -44,6 +20,16 @@ export const ProjectWrapper = styled.section`
 export const CustomSlider = styled(Slider)`
     width: 1200px;
     margin: 10px;
+    visibility: hidden;
+    
+    ${({ scrolledLeft }) => scrolledLeft && css`
+        visibility: visible;
+        animation: ${leftAnimation} 1.5s;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        animation:none;
+    };
+  `} 
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstportfolioBreakPoint}px){
       width: 1000px;

@@ -3,7 +3,7 @@ import { titleLeftAnimation, titleRightAnimation } from "./animationsStore";
 import SVG from "react-inlinesvg";
 
 export const Wrapper = styled.section`
-  min-height: 100vh;
+  min-height: 1050px;
   background: ${({ theme }) => theme.color.mainColor};
   padding: 50px;
   display: grid;

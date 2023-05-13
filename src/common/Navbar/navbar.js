@@ -35,23 +35,27 @@ export const Navbar = () => {
                             to="skills"
                             spy={true}
                             smooth={true}
+                            offset={10}
                             duration={1500} >
                             Skills</Links>
                         <Links
                             to="education"
                             spy={true}
+                            offset={10}
                             smooth={true}
                             duration={1500} >
                             Education</Links>
                         <Links
                             to="portfolio"
                             spy={true}
+                            offset={10}
                             smooth={true}
                             duration={1500}
                         >Portfolio</Links>
                         <Links
                             to="contact"
                             spy={true}
+                            offset={10}
                             smooth={true}
                             duration={1500}
                         >Contact</Links>

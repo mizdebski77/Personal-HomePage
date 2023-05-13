@@ -13,5 +13,8 @@ export const theme = {
         firstBreakPoint: 1280,
         mobileMax: 900,
         smallPhone: 750,
+        tinyPhone: 600,
+        firstportfolioBreakPoint: 1500,
+        portfolioBreakPoint: 1380,
     }
 }

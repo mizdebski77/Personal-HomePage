@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Category, CategoryTitle, Color, FlagIcon, IconContainer, Level, List, ListItem, PictureCaption, ProgramIcon,  } from './styledSkills';
-import PS from '../../Images/ps.png'
-import PP from '../../Images/pp.png'
-import FL from '../../Images/fl.png'
-import VS from '../../Images/vs.png'
-import AI from '../../Images/ai.png'
-import AE from '../../Images/ae.png'
+import { Category, CategoryTitle, CategoryWrapper, Color, FlagIcon, IconContainer, Level, List, ListItem, PictureCaption, ProgramIcon, } from './styledSkills';
+import PS from '../../Images/Programs/ps.png'
+import PP from '../../Images/Programs/pp.png'
+import FL from '../../Images/Programs/fl.png'
+import VS from '../../Images/Programs/vs.png'
+import AI from '../../Images/Programs/ai.png'
+import AE from '../../Images/Programs/ae.png'
 import PL from '../../Images/Flags/pl.png'
 import ENG from '../../Images/Flags/gb.png'
 import GER from '../../Images/Flags/de.png'
@@ -18,7 +18,7 @@ export const Skills = () => {
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
 
     const isWindowScroll = () => {
-        if (window.scrollY > 1600) {
+        if (window.scrollY > 1500) {
             setScrolledNavbar(true);
         } else if (window.scrollY < 1200) {
             setScrolledNavbar(false)
@@ -49,16 +49,22 @@ export const Skills = () => {
                 "Promises, Async/Await",
                 "Scrum",
                 "NPM",
+                "Trello",
             ],
         },
+        {
+            current: [
+                "TypeScript",
+                "Figma",
+                "JS - Classes",
+                "TanStack Query",
+            ]
 
+        },
         {
             goals: [
                 "Node.js",
-                "TypeScript",
-                "JS - Classes",
                 "React Native",
-                "Figma",
                 "React Query",
                 "SQL",
                 "Cypress",
@@ -77,14 +83,27 @@ export const Skills = () => {
                         ))}
                     </List>
                 </Category>
-                <Category scrolledLeft={scrolledNavbar}>
-                    <CategoryTitle> What i want to learn</CategoryTitle>
-                    <List>
-                        {skillset[1].goals.map((item, index) => (
-                            <ListItem key={index}>{item}</ListItem>
-                        ))}
-                    </List>
-                </Category>
+                <CategoryWrapper>
+
+                    <Category scrolledLeft={scrolledNavbar}>
+                        <CategoryTitle> What i want to learn</CategoryTitle>
+                        <List>
+                            {skillset[2].goals.map((item, index) => (
+                                <ListItem key={index}>{item}</ListItem>
+                            ))}
+                        </List>
+                    </Category>
+                    <Category scrolledLeft={scrolledNavbar}>
+                        <CategoryTitle> Currently learning
+                        </CategoryTitle>
+                        <List>
+                            {skillset[1].current.map((item, index) => (
+                                <ListItem key={index}>{item}</ListItem>
+                            ))}
+                        </List>
+                    </Category>
+                </CategoryWrapper>
+
                 <Category scrolledRight={scrolledNavbar}>
                     <CategoryTitle> Language</CategoryTitle>
                     <List flags>
@@ -141,7 +160,7 @@ export const Skills = () => {
             </DataContainer>
 
             <TitleContainer>
-                <Title RightTitle  scrolled={scrolledNavbar}> Skills </Title>
+                <Title RightTitle scrolled={scrolledNavbar}> Skills </Title>
             </TitleContainer>
 
         </Wrapper>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Photo, Informations, Text, InformationContainer, InformationWrapper } from '../About/styledAbout';
-import prof from '../../Images/prof.png';
+import prof from '../../Images/prof.webp';
 import { DataContainer, Title, TitleContainer, Wrapper } from '../../storeElements';
 import { useEffect } from 'react';
 export const About = () => {
 
   const [scrolledNavbar, setScrolledNavbar] = useState(false);
-
 
   const isWindowScroll = () => {
     if (window.scrollY > 500) {
@@ -46,7 +45,8 @@ export const About = () => {
             <Informations rest>Interest :</Informations>
             <Informations rest white>Music production, Graphic Design, Sport</Informations>
           </InformationContainer>
-          <Text>I'm an enthusiastic Frontend Developer who is passionate about new technologies and dedicated to learning React. Highly motivated fast learner currently looking for new job opportunities.</Text>
+          <Text>I'm an enthusiastic Frontend Developer with a strong passion for new technologies and a deep commitment to learning React. I am highly motivated and thrive on being a fast learner. Currently, I am actively seeking new job opportunities to further enhance my skills and contribute to innovative projects.
+          </Text>
         </InformationWrapper>
 
       </DataContainer>

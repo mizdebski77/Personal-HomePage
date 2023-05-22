@@ -46,6 +46,12 @@ export const CategoryTitle = styled.h1`
   };
 `;
 
+export const CategoryWrapper = styled.div`
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+`;
+
 export const List = styled.ul`
   color: ${({ theme }) => theme.color.fontMain};
   display: grid;

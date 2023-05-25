@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { leftAnimation, rightAnimation } from "../../animationsStore";
+import {  rightAnimation } from "../../animationsStore";
 import Slider from "react-slick";
 
 export const ProjectWrapper = styled.section`

@@ -16,11 +16,10 @@ export const About = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", isWindowScroll);
-
     return () => window.removeEventListener("scroll", isWindowScroll)
-
   }, []);
 
+  
   return (
     <Wrapper leftWrapper id="about">
       <TitleContainer>

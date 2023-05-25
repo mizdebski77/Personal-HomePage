@@ -48,6 +48,7 @@ export const Skills = () => {
                 "Scrum",
                 "NPM",
                 "Trello",
+                "TanStack Query",
             ],
         },
         {
@@ -55,7 +56,6 @@ export const Skills = () => {
                 "TypeScript",
                 "Figma",
                 "JS - Classes",
-                "TanStack Query",
             ]
 
         },

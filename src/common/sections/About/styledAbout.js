@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
+import { leftAnimation } from "../../animationsStore";
 
 const inAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-200%);
+    transform: translateX(-50%);
   }
   to {
     opacity: 1;
@@ -32,7 +33,7 @@ export const Photo = styled.img`
 
   ${({ scrolled }) => scrolled && css`
     visibility: visible;
-    animation: ${inAnimation} 1s;`}
+    animation: ${leftAnimation} 1s;`}
     
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation:none;
@@ -56,7 +57,7 @@ export const InformationWrapper = styled.div`
 
   ${({ scrolled }) => scrolled && css`
     visibility: visible;
-    animation: ${inAnimation} 1s;`}
+    animation: ${leftAnimation} 1s;`}
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     animation:none;

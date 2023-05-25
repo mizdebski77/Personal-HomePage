@@ -16,9 +16,7 @@ export const Contact = () => {
     const isWindowScroll = () => {
         if (window.scrollY > 4650) {
             setScrolledNavbar(true);
-        } else if (window.scrollY < 4550) {
-            setScrolledNavbar(false);
-        };
+        }
     };
 
     useEffect(() => {

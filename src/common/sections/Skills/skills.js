@@ -20,9 +20,7 @@ export const Skills = () => {
     const isWindowScroll = () => {
         if (window.scrollY > 1500) {
             setScrolledNavbar(true);
-        } else if (window.scrollY < 1200) {
-            setScrolledNavbar(false)
-        };
+        }
     };
 
     window.addEventListener("scroll", isWindowScroll);

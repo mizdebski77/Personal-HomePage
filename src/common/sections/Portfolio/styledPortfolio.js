@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { leftAnimation } from "../../animationsStore";
+import { leftAnimation, rightAnimation } from "../../animationsStore";
 import Slider from "react-slick";
 
 export const ProjectWrapper = styled.section`
@@ -22,9 +22,9 @@ export const CustomSlider = styled(Slider)`
     margin: 10px;
     visibility: hidden;
     
-    ${({ scrolledLeft }) => scrolledLeft && css`
+    ${({ scrolledRight }) => scrolledRight && css`
         visibility: visible;
-        animation: ${leftAnimation} 1.5s;
+        animation: ${rightAnimation} 1.5s;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         animation:none;

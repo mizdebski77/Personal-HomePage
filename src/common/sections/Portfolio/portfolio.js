@@ -19,9 +19,7 @@ export const Portfolio = () => {
     const isWindowScroll = () => {
         if (window.scrollY > 3650) {
             setScrolledNavbar(true);
-        } else if (window.scrollY < 3400) {
-            setScrolledNavbar(false)
-        };
+        }
     };
 
     useEffect(() => {
@@ -49,7 +47,7 @@ export const Portfolio = () => {
     return (
         <Wrapper RightWrapper id="portfolio" >
             <DataContainer gh>
-                <CustomSlider scrolledLeft={scrolledNavbar} {...settings}>
+                <CustomSlider scrolledRight={scrolledNavbar} {...settings}>
                     {Repositories.map((repo) => (
                         <ProjectWrapper
                             key={repo.id}>

@@ -50,6 +50,10 @@ export const CategoryWrapper = styled.div`
   display: flex;
   gap: 30px;
   justify-content: center;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+   flex-direction: column;
+  };
 `;
 
 export const List = styled.ul`

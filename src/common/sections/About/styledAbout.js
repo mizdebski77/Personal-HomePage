@@ -1,16 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import { leftAnimation } from "../../animationsStore";
-
-const inAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-`;
 
 export const Photo = styled.img`
   width: 400px;

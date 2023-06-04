@@ -17,6 +17,7 @@ export const Wrapper = styled.section`
 
   ${({ leftWrapper }) => leftWrapper && css`
     grid-template-columns: auto 1fr;
+    
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     grid-template-columns: 1fr;
     justify-content: center;
@@ -27,7 +28,8 @@ export const Wrapper = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
     display: flex;
-    flex-direction: column-reverse;  `};
+    flex-direction: column-reverse;  
+    `};
 `;
 
 export const TitleContainer = styled.div`

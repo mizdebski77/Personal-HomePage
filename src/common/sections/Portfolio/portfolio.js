@@ -12,12 +12,11 @@ export const Portfolio = () => {
 
     useEffect(() => {
         dispatch(fetchRepos());
-
     }, [dispatch])
 
     const [scrolledNavbar, setScrolledNavbar] = useState(false);
     const isWindowScroll = () => {
-        if (window.scrollY > 3650) {
+        if (window.scrollY > 3050) {
             setScrolledNavbar(true);
         }
     };
